@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 // Pages
 import Home from '../pages/Home/Home';
@@ -15,6 +16,7 @@ const Routes = () => {
                 <Route exact path="/projetos" component={Projetos} />
                 <Route exact path="/contato" component={Contato} />
             </Switch>
+            <Footer/>
         </BrowserRouter>
     );
 }

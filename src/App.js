@@ -20,9 +20,11 @@ function App() {
   })
 
   return (
-    <ThemeProvider theme={theme}>
-      <Routes/>
-    </ThemeProvider>
+    <div className="general-container">
+      <ThemeProvider theme={theme}>
+        <Routes/>
+      </ThemeProvider>
+    </div>
   );
 }
 
