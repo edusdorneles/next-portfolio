@@ -12,5 +12,6 @@ export default makeStyles(() => ({
 
     cardDescription: {
         color: 'white !important',
+        textAlign: 'justify',
     }
 }));

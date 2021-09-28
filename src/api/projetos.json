@@ -1,56 +1,29 @@
 [
     {
         "id": "1",
-        "nome": "Projeto 1",
-        "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/500x500_SzphcX0Pt.jpg?updatedAt=1632605985138",
-        "linkGit": "https://www.google.com.br",
-        "linkPage": "https://www.facebook.com.br",
-        "dataCriado": "14 de Setembro, 2021"
+        "nome": "L&D Kitchen",
+        "descricao": "Ecommerce para e empresa L&D, feito em React e utilizando a API CommerceJS para criação dos produtos e etc. (Em desenvolvimento)",
+        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/LD_foto_2wTnf3Zzw.png?updatedAt=1632766571027",
+        "linkGit": "https://github.com/dududornelees/ld-kitchen-ecommerce",
+        "linkPage": "https://ldkitchen.com.br/",
+        "dataCriado": "30 de Setembro, 2021"
     },
     {
         "id": "2",
-        "nome": "Projeto 2",
-        "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/500x500_SzphcX0Pt.jpg?updatedAt=1632605985138",
-        "linkGit": "https://www.google.com.br",
-        "linkPage": "https://www.facebook.com.br",
-        "dataCriado": "14 de Setembro, 2021"
+        "nome": "RG Nova Vida",
+        "descricao": "Landing page para a empresa RG Nova Vida, feita em HTML, CSS, JavaScript e PHP para o backend.",
+        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/rgnova_azpYy1EYy.png?updatedAt=1632767357344",
+        "linkGit": "https://github.com/dududornelees/nova-vida",
+        "linkPage": "https://rgnovavida.com.br",
+        "dataCriado": "2 de Março, 2021"
     },
     {
         "id": "3",
-        "nome": "Projeto 3",
-        "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/500x500_SzphcX0Pt.jpg?updatedAt=1632605985138",
-        "linkGit": "https://www.google.com.br",
-        "linkPage": "https://www.facebook.com.br",
-        "dataCriado": "14 de Setembro, 2021"
-    },
-    {
-        "id": "4",
-        "nome": "Projeto 4",
-        "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/500x500_SzphcX0Pt.jpg?updatedAt=1632605985138",
-        "linkGit": "https://www.google.com.br",
-        "linkPage": "https://www.facebook.com.br",
-        "dataCriado": "14 de Setembro, 2021"
-    },
-    {
-        "id": "5",
-        "nome": "Projeto 5",
-        "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/500x500_SzphcX0Pt.jpg?updatedAt=1632605985138",
-        "linkGit": "https://www.google.com.br",
-        "linkPage": "https://www.facebook.com.br",
-        "dataCriado": "14 de Setembro, 2021"
-    },
-    {
-        "id": "6",
-        "nome": "Projeto 6",
-        "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/500x500_SzphcX0Pt.jpg?updatedAt=1632605985138",
-        "linkGit": "https://www.google.com.br",
-        "linkPage": "https://www.facebook.com.br",
-        "dataCriado": "14 de Setembro, 2021"
+        "nome": "LOL - Champions",
+        "descricao": "Projeto para demonstrar meus conhecimentos utilizando APIs, neste caso, utilizei a API do League of Legends.",
+        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/lol_5kowzeSkX2JG.png?updatedAt=1632769615669",
+        "linkGit": "https://github.com/dududornelees/axios-lol-api",
+        "linkPage": "https://dududornelees.com.br/projetos/axios-lol-api/",
+        "dataCriado": "2 de Julho, 2021"
     }
 ]

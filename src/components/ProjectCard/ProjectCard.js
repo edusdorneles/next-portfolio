@@ -2,7 +2,6 @@ import React from 'react'
 import { CardHeader, Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { Link } from 'react-router-dom';
 
 import useStyles from './styles';
 

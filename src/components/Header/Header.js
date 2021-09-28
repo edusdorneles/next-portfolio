@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Grid, useMediaQuery, useTheme, IconButton, SwipeableDrawer } from '@material-ui/core';
+import { Container, Grid, useMediaQuery, useTheme, IconButton, SwipeableDrawer, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '../Menu/Menu';
@@ -24,7 +24,9 @@ const Header = () => {
             <Container>
                 <Grid container>
                     <Grid item xs={6} className={classes.headerLogo}>
-                        <h1 className={classes.headerTitle}><span className={classes.headerEduardo}>Eduardo</span>Dorneles</h1>
+                        <Typography to="/" component={Link} className={classes.headerTitle}>
+                            Eduardo<span className={classes.headerDorneles}>Dorneles</span>
+                        </Typography>
                     </Grid>
 
                     { 
@@ -41,13 +43,13 @@ const Header = () => {
                             <nav>
                                 <ul className={classes.navUl}>
                                     <li className={classes.navLi}>
-                                        <Link className={classes.navLink} to="/">home</Link>
+                                        <Link className={classes.navLink} to="/">Home</Link>
                                     </li>
                                     <li className={classes.navLi}>
-                                        <Link className={classes.navLink} to="/projetos">projetos</Link>
+                                        <Link className={classes.navLink} to="/projetos">Projetos</Link>
                                     </li>
                                     <li className={classes.navLi}>
-                                        <Link className={classes.navLink} to="/contato">contato</Link>
+                                        <Link className={classes.navLink} to="/contato">Contato</Link>
                                     </li>
                                 </ul>
                             </nav>

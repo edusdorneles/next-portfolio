@@ -5,7 +5,7 @@ export default makeStyles(() => ({
         width: '100%',
         height: '70px',
         backgroundColor: '#14141C',
-        lineHeight: '70px',
+        lineHeight: '76px',
     },
 
     headerLogo: {
@@ -14,14 +14,15 @@ export default makeStyles(() => ({
     },
 
     headerTitle: {
-      color: 'white',
+      color: '#0E79B2',
       fontWeight: '200',
-      fontSize: '24px'
+      fontSize: '24px !important',
+      textDecoration: 'none',
     },
 
-    headerEduardo: {
-        color: '#0E79B2',
-        fontWeight: '500',
+    headerDorneles: {
+        color: 'white',
+        fontWeight: '300',
     },
 
     headerNav: {
