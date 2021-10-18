@@ -10,9 +10,11 @@
 <p>
 
 ---
+<a href="https://www.dududornelees.com.br">
+    <img alt="Portfólio Online GIF" title="Portfólio GIF" src="./github/PortfolioOnline.gif" width="100%" />
+</a>
 
-<img alt="Portfólio Online GIF" title="Portfólio GIF" src="./github/PortfolioOnline.gif" width="100%" />
-
+<p align="center">Clique <a href="https://www.dududornelees.com.br">aqui</a> para abrir o site da aplicação!<p>
 
 
 <h3 id="pre-requisitos">Pré-Requisitos</h3>
@@ -46,7 +48,6 @@ As seguintes ferramentas foram utilizadas na construção deste projeto:
 
 - [React](https://pt-br.reactjs.org/)
 - [React Router Dom](https://reactrouter.com/)
-- [Context API](https://pt-br.reactjs.org/docs/context.html)
 - [EmailJS](https://www.emailjs.com/)
 - [Material UI](https://mui.com/pt/)
 
