@@ -1,29 +1,56 @@
-[
+[    
     {
         "id": "1",
-        "nome": "L&D Kitchen",
-        "descricao": "Ecommerce para e empresa L&D, feito em React e utilizando a API CommerceJS para criação dos produtos e etc. (Em desenvolvimento)",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/LD_foto_2wTnf3Zzw.png?updatedAt=1632766571027",
-        "linkGit": "https://github.com/dududornelees/ld-kitchen-ecommerce",
-        "linkPage": "https://ldkitchen.com.br/",
-        "dataCriado": "30 de Setembro, 2021"
+        "nome": "RG Nova Vida",
+        "descricao": "Landing page para a empresa RG Nova Vida, feita em HTML, CSS, JavaScript.",
+        "imagem": "https://i.imgur.com/Ah6xaZg.jpg",
+        "linkGit": "https://github.com/dududornelees/nova-vida",
+        "linkPage": "https://rgnovavida.com.br",
+        "dataCriado": "2 de Março, 2021"        
     },
     {
         "id": "2",
-        "nome": "RG Nova Vida",
-        "descricao": "Landing page para a empresa RG Nova Vida, feita em HTML, CSS, JavaScript e PHP para o backend.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/rgnova_azpYy1EYy.png?updatedAt=1632767357344",
-        "linkGit": "https://github.com/dududornelees/nova-vida",
-        "linkPage": "https://rgnovavida.com.br",
-        "dataCriado": "2 de Março, 2021"
+        "nome": "LOL - Champions",
+        "descricao": "Projeto para demonstrar meus conhecimentos recebendo dados de APIs.",
+        "imagem": "https://i.imgur.com/8NEB4oQ.jpg",
+        "linkGit": "https://github.com/dududornelees/league-of-legends-champs",
+        "linkPage": "https://league-of-legends-champs-dududornelees.netlify.app/",
+        "dataCriado": "2 de Julho, 2021"
     },
     {
         "id": "3",
-        "nome": "LOL - Champions",
-        "descricao": "Projeto para demonstrar meus conhecimentos utilizando APIs, neste caso, utilizei a API do League of Legends.",
-        "imagem": "https://ik.imagekit.io/674cfd0ge3rg/lol_5kowzeSkX2JG.png?updatedAt=1632769615669",
-        "linkGit": "https://github.com/dududornelees/axios-lol-api",
-        "linkPage": "https://dududornelees.com.br/projetos/axios-lol-api/",
-        "dataCriado": "2 de Julho, 2021"
+        "nome": "Lista de Afazeres",
+        "descricao": "Versão 2.0 de uma Lista de afazeres (to do list), feita com React.",
+        "imagem": "https://i.imgur.com/vUWrZQK.jpg",
+        "linkGit": "https://github.com/dududornelees/to-do-list",
+        "linkPage": "https://to-do-list-dududornelees.netlify.app/",
+        "dataCriado": "12 de Outubro, 2021"
+    },
+    {
+        "id": "4",
+        "nome": "Qual o Número?",
+        "descricao": "Projeto que consiste em adivinhar um número que é gerado aleatóriamente por uma API.",
+        "imagem": "https://i.imgur.com/49pLRrL.jpg",
+        "linkGit": "https://github.com/dududornelees/qual-o-numero",
+        "linkPage": "https://qual-o-numero-dududornelees.netlify.app/",
+        "dataCriado": "18 de Outubro, 2021"
+    },
+    {
+        "id": "5",
+        "nome": "Calculadora IMC",
+        "descricao": "Aplicação utilizando React Native para fazer o calculo do IMC de uma pessoa.",
+        "imagem": "https://i.imgur.com/i5WwZjR.jpg",
+        "linkGit": "https://github.com/dududornelees/calculadora-imc",
+        "linkPage": "https://dududornelees.com.br/projetos/",
+        "dataCriado": "1 de Outubro, 2021"
+    },
+    {
+        "id": "6",
+        "nome": "L&D Kitchen",
+        "descricao": "Ecommerce feito em React & Node para back-end. (Em desenvolvimento)",
+        "imagem": "https://i.imgur.com/SNVkzEq.jpg",
+        "linkGit": "https://github.com/dududornelees/react-ecommerce-frontend",
+        "linkPage": "https://ldkitchen.com.br/",
+        "dataCriado": "30 de Setembro, 2021"
     }
 ]
