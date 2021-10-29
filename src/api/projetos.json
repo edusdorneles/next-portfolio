@@ -13,7 +13,6 @@
         "nome": "LOL - Champions",
         "descricao": "Projeto para demonstrar meus conhecimentos recebendo dados de APIs.",
         "imagem": "https://i.imgur.com/8NEB4oQ.jpg",
-<<<<<<< HEAD
         "linkGit": "https://github.com/dududornelees/league-of-legends-champs",
         "linkPage": "https://league-of-legends-champs-dududornelees.netlify.app/",
         "dataCriado": "2 de Julho, 2021"
@@ -28,61 +27,29 @@
         "dataCriado": "12 de Outubro, 2021"
     },
     {
-=======
-        "linkGit": "https://github.com/dududornelees/axios-lol-api",
-        "linkPage": "https://dududornelees.com.br/projetos/axios-lol-api/",
-        "dataCriado": "2 de Julho, 2021"
-    },
-    {
-        "id": "3",
-        "nome": "Lista de Afazeres",
-        "descricao": "Versão 2.0 de uma Lista de afazeres (to do list), feita com React.",
-        "imagem": "https://i.imgur.com/vUWrZQK.jpg",
-        "linkGit": "https://github.com/dududornelees/axios-lol-api",
-        "linkPage": "https://dududornelees.com.br/projetos/axios-lol-api/",
-        "dataCriado": "2 de Julho, 2021"
-    },
-    {
->>>>>>> 02d855f0566d0a5f776fac487d67f7ecaafc488a
         "id": "4",
         "nome": "Qual o Número?",
         "descricao": "Projeto que consiste em adivinhar um número que é gerado aleatóriamente por uma API.",
         "imagem": "https://i.imgur.com/49pLRrL.jpg",
-<<<<<<< HEAD
         "linkGit": "https://github.com/dududornelees/qual-o-numero",
         "linkPage": "https://qual-o-numero-dududornelees.netlify.app/",
         "dataCriado": "18 de Outubro, 2021"
-=======
-        "linkGit": "https://github.com/dududornelees/axios-lol-api",
-        "linkPage": "https://dududornelees.com.br/projetos/axios-lol-api/",
-        "dataCriado": "2 de Julho, 2021"
->>>>>>> 02d855f0566d0a5f776fac487d67f7ecaafc488a
     },
     {
         "id": "5",
         "nome": "Calculadora IMC",
         "descricao": "Aplicação utilizando React Native para fazer o calculo do IMC de uma pessoa.",
         "imagem": "https://i.imgur.com/i5WwZjR.jpg",
-<<<<<<< HEAD
         "linkGit": "https://github.com/dududornelees/calculadora-imc",
         "linkPage": "https://dududornelees.com.br/projetos/",
         "dataCriado": "1 de Outubro, 2021"
-=======
-        "linkGit": "https://github.com/dududornelees/ld-kitchen-ecommerce",
-        "linkPage": "https://ldkitchen.com.br/",
-        "dataCriado": "30 de Setembro, 2021"
->>>>>>> 02d855f0566d0a5f776fac487d67f7ecaafc488a
     },
     {
         "id": "6",
         "nome": "L&D Kitchen",
         "descricao": "Ecommerce feito em React & Node para back-end. (Em desenvolvimento)",
         "imagem": "https://i.imgur.com/SNVkzEq.jpg",
-<<<<<<< HEAD
         "linkGit": "https://github.com/dududornelees/react-ecommerce-frontend",
-=======
-        "linkGit": "https://github.com/dududornelees/ld-kitchen-ecommerce",
->>>>>>> 02d855f0566d0a5f776fac487d67f7ecaafc488a
         "linkPage": "https://ldkitchen.com.br/",
         "dataCriado": "30 de Setembro, 2021"
     }
