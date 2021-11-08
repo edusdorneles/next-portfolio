@@ -5,10 +5,8 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Card from '../../components/Card/Card';
 
-
+// Styles
 import useStyles from './styles';
-
-import Perfil from '../../images/Perfil-Resized.jpg';
 
 const Home = () => {
     const classes = useStyles();
@@ -17,7 +15,7 @@ const Home = () => {
         <Container className={classes.mainHome}>
             <Box className={classes.containerHome}>
                 <Box className={classes.divImage}>
-                    <img className={classes.perfilImage} src={Perfil} alt="Foto de perfil: Eduardo Dorneles" />
+                    <img className={classes.perfilImage} src="/images/Perfil.webp" alt="Foto de perfil: Eduardo Dorneles" />
                 </Box>
 
                 <Card title="front-end" />
@@ -27,15 +25,15 @@ const Home = () => {
                     <p className={classes.divText}>Utilizo como principal ferramenta de trabalho, o React!</p>
 
                     <Box className={classes.divIcons}>
-                        <IconButton size="medium" className={classes.iconBtn} href="https://wa.me/+5551993896982" target="_blank">
+                        <IconButton size="medium" className={classes.iconBtn} href="https://wa.me/+5551993896982" target="_blank" rel="noreferrer">
                             <WhatsAppIcon className={classes.icons} />
                         </IconButton>
 
-                        <IconButton size="medium" className={classes.iconBtn} href="https://github.com/dududornelees" target="_blank">
+                        <IconButton size="medium" className={classes.iconBtn} href="https://github.com/dududornelees" target="_blank" rel="noreferrer">
                             <GitHubIcon className={classes.icons} />
                         </IconButton>
 
-                        <IconButton size="medium" className={classes.iconBtn} href="https://www.linkedin.com/in/dududornelees/" target="_blank">
+                        <IconButton size="medium" className={classes.iconBtn} href="https://www.linkedin.com/in/dududornelees/" target="_blank" rel="noreferrer">
                             <LinkedInIcon className={classes.icons} />
                         </IconButton>
                     </Box>
