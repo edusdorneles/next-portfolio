@@ -1,9 +1,7 @@
+import Routes from 'routes/Routes';
+
 const App = () => {
-  return (
-    <div>
-      Início!
-    </div>
-  )
+  return(<Routes />)
 }
 
 export default App;
