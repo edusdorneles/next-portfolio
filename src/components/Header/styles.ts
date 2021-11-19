@@ -13,7 +13,7 @@ export const HeaderStyle = styled.header`
     }
 
     .header__logo img {
-        height: 38px;
+        height: 32px;
     }
 `;
 

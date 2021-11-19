@@ -1,8 +1,14 @@
+// Styles
+import { ContatoStyle } from './styles';
+import { Container } from 'styles/Global';
+
 const Contato: React.FC = () => {
     return (
-        <div>
-            Contato!
-        </div>
+        <ContatoStyle>
+            <Container>
+                Contato!
+            </Container>
+        </ContatoStyle>
     )
 }
 
