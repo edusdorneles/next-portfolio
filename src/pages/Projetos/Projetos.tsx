@@ -23,7 +23,11 @@ const Projetos: React.FC = () => {
     return (
         <ProjetosStyle>
             <Container className="projetos__container">
-                <TitleDesc title="projetos" firstDesc="Aqui estão os meus projetos pessoais e profissionais" secondDesc="Disponibilizo tanto o live preview do site, quanto o código, hospedado no GitHub" />
+                <TitleDesc 
+                    title="projetos" 
+                    firstDesc="Aqui estão os meus projetos pessoais e profissionais" 
+                    secondDesc="Disponibilizo tanto o live preview do site, quanto o código, hospedado no GitHub" 
+                />
 
                 <div className="projetos-card__container">
                     { projetos.map((projeto: Projeto) => (

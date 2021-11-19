@@ -17,7 +17,11 @@ const Home: React.FC = () => {
                     <img src="/images/profile.jpg" alt="Eduardo Dorneles - Foto de Perfil" />
                 </div>
 
-                <TitleDesc title="front-end" firstDesc="Sou desenvolvedor front-end" secondDesc="Utilizo como principal ferramenta de trabalho, o React!" />
+                <TitleDesc 
+                    title="front-end" 
+                    firstDesc="Sou desenvolvedor front-end" 
+                    secondDesc="Utilizo como principal ferramenta de trabalho, o React!" 
+                />
 
                 <div className="home__link-buttons">
                     <div className="link-buttons__link">

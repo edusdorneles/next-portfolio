@@ -4,7 +4,7 @@ export const ProjetoCardStyle = styled.div`
     height: 100%;
     background-color: ${props => props.theme.colors.primary};
     border-radius: 5px;
-    border: 1px solid #252525;    
+    border: 1px solid #252525;
 
     .projeto-card__text {
         padding: 15px;
