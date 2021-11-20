@@ -14,7 +14,7 @@ export const DefaultTheme = {
         small: '14px',
         medium: '16px',
         large: '18px'
-    },    
+    },
 
     layoutMargin: {
         marginTop: '30px',
@@ -22,4 +22,17 @@ export const DefaultTheme = {
     },
 
     transition: 'all .2s',
+
+
+    // Tema para mobile
+    mobileFontSize: {
+        small: '12px',
+        medium: '14px',
+        large: '16px'
+    }, 
+
+    mobileLayoutMargin: {
+        marginTop: '20px',
+        marginBottom: '20px'
+    }
 }

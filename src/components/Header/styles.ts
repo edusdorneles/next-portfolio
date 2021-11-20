@@ -15,6 +15,12 @@ export const HeaderStyle = styled.header`
     .header__logo img {
         height: 32px;
     }
+
+
+    /* Adaptação para mobile */
+    @media (max-width: 768px) {
+        margin-bottom: ${props => props.theme.mobileLayoutMargin.marginBottom};
+    }
 `;
 
 export const NavStyle = styled.nav`

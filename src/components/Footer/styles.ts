@@ -11,4 +11,10 @@ export const FooterStyle = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+    /* Adaptação para mobile */
+    @media (max-width: 768px) {
+        margin-top: ${props => props.theme.mobileLayoutMargin.marginTop};
+    }
 `;

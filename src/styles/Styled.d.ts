@@ -25,5 +25,18 @@ declare module 'styled-components' {
         }
 
         transition: string,
+
+
+        // Tema para mobile
+        mobileFontSize: {
+            small: string,
+            medium: string,
+            large: string
+        }, 
+
+        mobileLayoutMargin: {
+            marginTop: string,
+            marginBottom: string
+        }
     }
 }

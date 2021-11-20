@@ -28,4 +28,20 @@ export const TitleDescStyle = styled.div`
             color: ${props => props.theme.colors.text}
         }
     }
+
+
+    /* Adaptação para mobile */
+    @media (max-width: 768px) {
+        .title-desc__title {
+            h1 {
+                font-size: ${props => props.theme.mobileFontSize.large};
+            }
+        }
+
+        .title-desc__desc {                    
+            p {
+                font-size: ${props => props.theme.mobileFontSize.medium}
+            }
+        }
+    }
 `;

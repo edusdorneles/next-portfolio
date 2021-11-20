@@ -54,7 +54,7 @@
         "title": "Calculadora IMC",
         "dataInicio": "1 de Outubro, 2021",
         "image": "/images/projetos/calculadora-imc.jpg",
-        "desc": "Projeto utilizando React Native para fazer op cálculo de IMC.",
+        "desc": "Projeto utilizando React Native para fazer o cálculo de IMC.",
         "differential": "— React Native.",
         "linkGithub": "https://github.com/dududornelees/calculadora-imc/",
         "linkPreview": "https://github.com/dududornelees/calculadora-imc/"

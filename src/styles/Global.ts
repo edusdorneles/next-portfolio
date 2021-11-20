@@ -31,5 +31,5 @@ export const Container = styled.div`
 
     @media (min-width: 992px) {    
         width: 970px;
-    }    
+    }
 `;
