@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import TitleDesc from 'components/TitleDesc/TitleDesc';
 import Input from 'react-phone-number-input/input';
+import emailjs from 'emailjs-com';
+
+// Toast envio do email
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Styles
 import { ContatoStyle } from './styles';
@@ -16,16 +21,56 @@ const Contato: React.FC = () => {
     const [email, setEmail] = useState('');
     const [mensagem, setMensagem] = useState('');
 
-    const sendEmail = () => {
-        // Criar função para enviar email
-        console.log(nome);
-        console.log(telefone);
-        console.log(email);
-        console.log(mensagem);
+    // Função para envio de email
+    const sendEmail = async () => {
+        const serviceId: string = process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string;
+        const templateId: string = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID as string;
+        const userId: string = process.env.REACT_APP_EMAIL_JS_USER_ID as string;
+
+        const params = {
+            nome: nome,
+            telefone: telefone,
+            email: email,
+            mensagem: mensagem
+        }        
+
+        await toast.promise(
+            emailjs.send(serviceId, templateId, params, userId)
+            .then((response) => {
+                console.log('Sucesso no envio: ', response.status, response.text);                
+
+            }, (err) => {
+                console.log('Falha no envio: ', err);                
+            }),
+
+            {
+                pending: 'Enviando email, aguarde!',
+                success: 'Email enviado!',
+                error: 'Erro no envio!'
+            }
+        );
+
+        setNome('');
+        setTelefone('');
+        setEmail('');
+        setMensagem('');
     }
 
     return (
         <ContatoStyle>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+
             <Container className="contato__container">
                 <TitleDesc 
                     title="contato" 
@@ -44,8 +89,8 @@ const Contato: React.FC = () => {
                         </a>
                     </div>
 
-                    <form>
-                        <input 
+                    <form method="POST">
+                        <input
                             name="nome" 
                             type="nome" 
                             placeholder="Nome:"
@@ -81,7 +126,7 @@ const Contato: React.FC = () => {
                         </button>
                     </form>
                 </div>
-            </Container>
+            </Container>            
         </ContatoStyle>
     )
 }
