@@ -26,6 +26,8 @@ export const HeaderStyle = styled.header`
 export const NavStyle = styled.nav`
     ul {
         display: flex;
+        align-items: center;
+        justify-content: flex-end;
         
         li {
             padding: 10px;
@@ -40,7 +42,34 @@ export const NavStyle = styled.nav`
                 &:hover {
                     color: ${props => props.theme.colors.secondary}
                 }
+
+                &.active {
+                    background-color: ${props => props.theme.colors.secondary};
+                    color: white;
+                }
             }
         }
+    }
+
+    .navbar__mobile {
+        display: none;
+        
+        li {
+            padding: 5px;
+
+            a {
+                padding: 5px;
+                border-radius: 5px;
+                font-size: 20px;
+                display: flex;
+            }            
+        }
+    }
+
+
+    /* Adaptação para mobile */
+    @media (max-width: 768px) {
+        .navbar__desktop {display: none}
+        .navbar__mobile {display: flex}
     }
 `;

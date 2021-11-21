@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import TitleDesc from 'components/TitleDesc/TitleDesc';
 import Input from 'react-phone-number-input/input';
-import emailjs from 'emailjs-com';
+import emailjs, { init } from 'emailjs-com';
 
 // Toast envio do email
 import { ToastContainer, toast } from 'react-toastify';
@@ -22,10 +22,12 @@ const Contato: React.FC = () => {
     const [mensagem, setMensagem] = useState('');
 
     // Função para envio de email
+    const userId: string = process.env.REACT_APP_EMAIL_JS_USER_ID as string;
+    init(userId);
+    
     const sendEmail = async () => {
         const serviceId: string = process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string;
-        const templateId: string = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID as string;
-        const userId: string = process.env.REACT_APP_EMAIL_JS_USER_ID as string;
+        const templateId: string = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID as string;        
 
         const params = {
             nome: nome,
@@ -35,7 +37,7 @@ const Contato: React.FC = () => {
         }        
 
         await toast.promise(
-            emailjs.send(serviceId, templateId, params, userId)
+            emailjs.send(serviceId, templateId, params)
             .then((response) => {
                 console.log('Sucesso no envio: ', response.status, response.text);                
 
