@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 import Layout from "components/Layout";
+import Loading from 'components/Loading/Loading';
 
 // Styles
 import { GlobalStyle } from 'styles/Global';
@@ -20,7 +21,7 @@ const Routes: React.FC = () => {
                     <Route 
                         path="/" 
                         element={
-                            <React.Suspense fallback={false}>
+                            <React.Suspense fallback={<Loading />}>
                                 <Home />
                             </React.Suspense>
                         }
@@ -29,7 +30,7 @@ const Routes: React.FC = () => {
                     <Route 
                         path="/projetos" 
                         element={
-                            <React.Suspense fallback={false}>
+                            <React.Suspense fallback={<Loading />}>
                                 <Projetos />
                             </React.Suspense>
                         }
@@ -38,7 +39,7 @@ const Routes: React.FC = () => {
                         <Route
                             path="/contato"
                             element={
-                                <React.Suspense fallback={false}>
+                                <React.Suspense fallback={<Loading />}>
                                     <Contato />
                                 </React.Suspense>
                             }
