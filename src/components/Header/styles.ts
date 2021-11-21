@@ -28,11 +28,10 @@ export const NavStyle = styled.nav`
         display: flex;
         
         li {
-            padding: 5px;
+            padding: 10px;
             list-style: none;
 
-            a {
-                padding: 5px;                
+            a {                
                 color: ${props => props.theme.colors.text};
                 font-size: ${props => props.theme.fontSize.medium};
                 text-decoration: none;                
