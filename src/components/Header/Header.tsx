@@ -18,7 +18,10 @@ const Header: React.FC = () => {
         <HeaderStyle>
             <Container className="header__container">
                 <div className="header__logo">
-                    <Link to="/">
+                    <Link 
+                        to="/" 
+                        onClick={() => {setActive('home')}} 
+                    >
                         <img src="/images/logo.png" alt="Eduardo Dorneles - Logo"/>
                     </Link>
                 </div>

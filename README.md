@@ -47,6 +47,7 @@ As seguintes ferramentas foram utilizadas na construção deste projeto:
 - [Styled-Components](https://styled-components.com/)
 - [React Router Dom](https://reactrouter.com/)
 - [EmailJS](https://www.emailjs.com/)
+- [React-Toastify](https://fkhadra.github.io/react-toastify/)
 
 
 ---
