@@ -25,19 +25,19 @@ const Home: React.FC = () => {
 
                 <div className="home__link-buttons">
                     <div className="link-buttons__link">
-                        <a href="https://wa.me/+5551993896982" target="_blank" rel="noreferrer">
+                        <a href="https://wa.me/+5551993896982/" aria-label="Whatsapp" target="_blank" rel="noreferrer">
                             <FaWhatsapp />
                         </a>    
                     </div>
 
                     <div className="link-buttons__link">
-                        <a href="https://github.com/dududornelees" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/dududornelees/" aria-label="GitHub" target="_blank" rel="noreferrer">
                             <FaGithub />
                         </a>    
                     </div>
 
                     <div className="link-buttons__link">
-                        <a href="https://www.linkedin.com/in/dududornelees/" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/dududornelees/" aria-label="Linkedin" target="_blank" rel="noreferrer">
                             <FaLinkedinIn />
                         </a>
                     </div>

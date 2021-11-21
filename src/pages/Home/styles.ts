@@ -9,6 +9,8 @@ export const HomeStyle = styled.div`
     }
 
     .home__profile-image img {
+        width: 220px;
+        height: 220px;
         border-radius: 500px;        
     }
 

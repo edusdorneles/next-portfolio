@@ -36,13 +36,13 @@ const ProjetoCard: React.FC<Props> = (props) => {
 
             <div className="projeto-card__link-buttons">
                 <div className="link-buttons__link">
-                    <a href={props.linkGithub} target="_blank" rel="noreferrer">
+                    <a href={props.linkGithub} aria-label="GitHub" target="_blank" rel="noreferrer">
                         <FaGithub />
                     </a>
                 </div>
 
                 <div className="link-buttons__link">
-                    <a href={props.linkPreview} target="_blank" rel="noreferrer">
+                    <a href={props.linkPreview} aria-label="Site" target="_blank" rel="noreferrer">
                         <VscGlobe />
                     </a>
                 </div>

@@ -13,6 +13,7 @@ export const HeaderStyle = styled.header`
     }
 
     .header__logo img {
+        width: 27px;
         height: 32px;
     }
 
