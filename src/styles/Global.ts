@@ -15,7 +15,15 @@ export const GlobalStyle = createGlobalStyle`
         color: ${props => props.theme.colors.text};        
     }
 
-    #root {min-height: 100vh;}
+    #root {min-height: 100vh}
+
+    // Scrollbar
+    html::-webkit-scrollbar {width: 5px}
+    html::-webkit-scrollbar-track {background-color: ${props => props.theme.colors.primary}}
+    html::-webkit-scrollbar-thumb {
+        background-color: ${props => props.theme.colors.secondary};
+        border-radius: 100px;
+    }
 `;
 
 export const Container = styled.div`
