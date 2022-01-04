@@ -17,43 +17,47 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Contato: React.FC = () => {
     const [nome, setNome] = useState('');
-    const [telefone, setTelefone] = useState('');
+    const [celular, setCelular] = useState('');
     const [email, setEmail] = useState('');
     const [mensagem, setMensagem] = useState('');
 
     // Função para envio de email
     const sendEmail = async () => {
-        const serviceId: string = process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string;
-        const templateId: string = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID as string;        
-        const userId: string = process.env.REACT_APP_EMAIL_JS_USER_ID as string;
+        if(nome && celular) {
+            const serviceId: string = process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string;
+            const templateId: string = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID as string;        
+            const userId: string = process.env.REACT_APP_EMAIL_JS_USER_ID as string;
 
-        const params = {
-            nome: nome,
-            telefone: telefone,
-            email: email,
-            mensagem: mensagem
-        }        
-
-        await toast.promise(
-            emailjs.send(serviceId, templateId, params, userId)
-            .then((response) => {
-                console.log('Sucesso no envio: ', response.status, response.text);                
-
-            }, (err) => {
-                console.log('Falha no envio: ', err);                
-            }),
-
-            {
-                pending: 'Enviando email, aguarde!',
-                success: 'Email enviado!',
-                error: 'Erro no envio!'
+            const params = {
+                nome: nome,
+                telefone: celular,
+                email: email,
+                mensagem: mensagem
             }
-        );
 
-        setNome('');
-        setTelefone('');
-        setEmail('');
-        setMensagem('');
+            await toast.promise(
+                emailjs.send(serviceId, templateId, params, userId)
+                .then((response) => {
+                    console.log('Sucesso no envio: ', response.status, response.text);                
+
+                }, (err) => {
+                    console.log('Falha no envio: ', err);                
+                }),
+
+                {
+                    pending: 'Enviando email, aguarde!',
+                    success: 'Email enviado!',
+                    error: 'Erro no envio!'
+                }
+            );
+
+            setNome('');
+            setCelular('');
+            setEmail('');
+            setMensagem('');
+        } else {
+            toast.error('Preencha todos os campos!');
+        }
     }
 
     return (
@@ -93,16 +97,16 @@ const Contato: React.FC = () => {
                         <input
                             name="nome" 
                             type="nome" 
-                            placeholder="Nome:"
+                            placeholder="Nome: *"
                             value={nome}
                             onChange={(e: any) => setNome(e.target.value)}
                         />
 
                         <Input 
-                            placeholder="Telefone:"
+                            placeholder="Celular: *"
                             defaultCountry="BR"
-                            value={telefone}
-                            onChange={(e: any) => {setTelefone(e)}}
+                            value={celular}
+                            onChange={(e: any) => {setCelular(e)}}
                         />
 
                         <input 
