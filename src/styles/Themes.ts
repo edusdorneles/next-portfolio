@@ -1,38 +1,37 @@
 export const DefaultTheme = {
-    title: 'DefaultTheme',
+  title: "DefaultTheme",
 
-    colors: {
-        primary: '#14141C',
-        secondary: '#0E79B2',
-        secondaryHover: '#0c6a9c',
-        
-        background: '#191923',
-        text: '#FFFFFF'
-    },
+  colors: {
+    primary: "#14141C",
+    secondary: "#0E79B2",
+    secondaryHover: "#0c6a9c",
 
-    fontSize: {
-        small: '14px',
-        medium: '16px',
-        large: '18px'
-    },
+    background: "#191923",
+    text: "#FFFFFF",
+  },
 
-    layoutMargin: {
-        marginTop: '30px',
-        marginBottom: '30px'
-    },
+  fontSize: {
+    small: "14px",
+    medium: "16px",
+    large: "18px",
+  },
 
-    transition: 'all .2s',
+  layoutMargin: {
+    marginTop: "30px",
+    marginBottom: "30px",
+  },
 
+  transition: "all .2s",
 
-    // Tema para mobile
-    mobileFontSize: {
-        small: '12px',
-        medium: '14px',
-        large: '16px'
-    }, 
+  // Tema para mobile
+  mobileFontSize: {
+    small: "12px",
+    medium: "14px",
+    large: "16px",
+  },
 
-    mobileLayoutMargin: {
-        marginTop: '20px',
-        marginBottom: '20px'
-    }
-}
+  mobileLayoutMargin: {
+    marginTop: "20px",
+    marginBottom: "20px",
+  },
+};
