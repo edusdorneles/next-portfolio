@@ -8,14 +8,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Styles
-import { ContatoStyle } from "./styles";
+import { ContactStyle } from "./styles";
 import { Container } from "styles/Global";
 
 // Icons
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
-const Contato: React.FC = () => {
+const Contact: React.FC = () => {
   const [nome, setNome] = useState("");
   const [celular, setCelular] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +64,7 @@ const Contato: React.FC = () => {
   };
 
   return (
-    <ContatoStyle>
+    <ContactStyle>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -78,14 +78,14 @@ const Contato: React.FC = () => {
         theme="dark"
       />
 
-      <Container className="contato__container">
+      <Container className="contact__container">
         <TitleDesc
           title="contato"
           firstDesc="Ficou interessado e quer entrar em contato?"
           secondDesc="Preencha o formulário abaixo, te responderei o mais rápido possível!"
         />
 
-        <div className="contato__form__container">
+        <div className="contact__form__container">
           <div className="form__link-buttons">
             <a
               href="https://wa.me/+5551993896982"
@@ -149,8 +149,8 @@ const Contato: React.FC = () => {
           </form>
         </div>
       </Container>
-    </ContatoStyle>
+    </ContactStyle>
   );
 };
 
-export default Contato;
+export default Contact;

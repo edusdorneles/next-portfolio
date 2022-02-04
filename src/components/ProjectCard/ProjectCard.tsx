@@ -1,5 +1,5 @@
 // Styles
-import { ProjetoCardStyle } from "./styles";
+import { ProjectCardStyle } from "./styles";
 
 // Icons
 import { FaGithub } from "react-icons/fa";
@@ -9,7 +9,7 @@ import { VscGlobe } from "react-icons/vsc";
 interface Props {
   id: number;
   title: string;
-  dataInicio: string;
+  initialDate: string;
   image: string;
   desc: string;
   differential: string;
@@ -17,24 +17,24 @@ interface Props {
   linkPreview: string;
 }
 
-const ProjetoCard: React.FC<Props> = (props) => {
+const ProjectCard: React.FC<Props> = (props) => {
   return (
-    <ProjetoCardStyle>
-      <div className="projeto-card__text">
-        <h2 className="projeto-card__text__title">{props.title}</h2>
-        <p className="projeto-card__text__data-inicio">{props.dataInicio}</p>
+    <ProjectCardStyle>
+      <div className="project-card__text">
+        <h2 className="project-card__text__title">{props.title}</h2>
+        <p className="project-card__text__data-inicio">{props.initialDate}</p>
       </div>
 
-      <div className="projeto-card__image">
+      <div className="project-card__image">
         <img src={props.image} alt={props.title} />
       </div>
 
-      <div className="projeto-card__text">
-        <p className="projeto-card__text__desc">{props.desc}</p>
-        <p className="projeto-card__text__differential">{props.differential}</p>
+      <div className="project-card__text">
+        <p className="project-card__text__desc">{props.desc}</p>
+        <p className="project-card__text__differential">{props.differential}</p>
       </div>
 
-      <div className="projeto-card__link-buttons">
+      <div className="project-card__link-buttons">
         <div className="link-buttons__link">
           <a
             href={props.linkGithub}
@@ -57,8 +57,8 @@ const ProjetoCard: React.FC<Props> = (props) => {
           </a>
         </div>
       </div>
-    </ProjetoCardStyle>
+    </ProjectCardStyle>
   );
 };
 
-export default ProjetoCard;
+export default ProjectCard;
