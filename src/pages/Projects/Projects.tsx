@@ -9,7 +9,7 @@ import { Container } from "styles/Global";
 interface Project {
   id: number;
   title: string;
-  dataInicio: string;
+  initialDate: string;
   image: string;
   desc: string;
   differential: string;
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
               key={project.id}
               id={project.id}
               title={project.title}
-              dataInicio={project.dataInicio}
+              initialDate={project.initialDate}
               image={project.image}
               desc={project.desc}
               differential={project.differential}

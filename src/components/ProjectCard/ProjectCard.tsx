@@ -9,7 +9,7 @@ import { VscGlobe } from "react-icons/vsc";
 interface Props {
   id: number;
   title: string;
-  dataInicio: string;
+  initialDate: string;
   image: string;
   desc: string;
   differential: string;
@@ -22,7 +22,7 @@ const ProjectCard: React.FC<Props> = (props) => {
     <ProjectCardStyle>
       <div className="project-card__text">
         <h2 className="project-card__text__title">{props.title}</h2>
-        <p className="project-card__text__data-inicio">{props.dataInicio}</p>
+        <p className="project-card__text__data-inicio">{props.initialDate}</p>
       </div>
 
       <div className="project-card__image">
