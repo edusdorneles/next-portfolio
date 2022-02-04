@@ -1,42 +1,41 @@
-import 'styled-components';
+import "styled-components";
 
-declare module 'styled-components' {
-    export interface DefaultTheme {
-        title: string,
+declare module "styled-components" {
+  export interface DefaultTheme {
+    title: string;
 
-        colors: {
-            primary: string,
-            secondary: string,  
-            secondaryHover: string,
-            
-            background: string,
-            text: string
-        }
+    colors: {
+      primary: string;
+      secondary: string;
+      secondaryHover: string;
 
-        fontSize: {
-            small: string,
-            medium: string,
-            large: string
-        }        
+      background: string;
+      text: string;
+    };
 
-        layoutMargin: {
-            marginTop: string,
-            marginBottom: string
-        }
+    fontSize: {
+      small: string;
+      medium: string;
+      large: string;
+    };
 
-        transition: string,
+    layoutMargin: {
+      marginTop: string;
+      marginBottom: string;
+    };
 
+    transition: string;
 
-        // Tema para mobile
-        mobileFontSize: {
-            small: string,
-            medium: string,
-            large: string
-        }, 
+    // Tema para mobile
+    mobileFontSize: {
+      small: string;
+      medium: string;
+      large: string;
+    };
 
-        mobileLayoutMargin: {
-            marginTop: string,
-            marginBottom: string
-        }
-    }
+    mobileLayoutMargin: {
+      marginTop: string;
+      marginBottom: string;
+    };
+  }
 }

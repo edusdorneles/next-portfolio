@@ -10,18 +10,16 @@
 <p>
 
 ---
+
 <a href="https://www.dududornelees.com.br">
     <img alt="Portfólio GIF" title="Portfólio GIF" src="./github/Portfolio.gif" width="100%" />
 </a>
 
 <p align="center">Clique <a href="https://www.dududornelees.com.br">aqui</a> para abrir o site da aplicação!<p>
 
-
 <h3 id="pre-requisitos">Pré-Requisitos</h3>
 Antes de começar, você vai precisar ter instalado em sua máquina as seguinte ferramentas: <a href="https://git-scm.com" target="_blank">Git</a>, <a href="https://nodejs.org/en/" target="_blank">Node.js</a>. <br>
 Além disto, é bom ter um editor para trabalhar com o código, como o <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>.
-
-
 
 <h3 id="rodando-a-aplicacao">Rodando a Aplicação</h3>
 
@@ -37,8 +35,6 @@ $ yarn start
 # O servidor iniciará na porta: 3000. Acesse http://localhost:3000
 ```
 
-
-
 <h3 id="tecnologias">Tecnologias</h3>
 As seguintes ferramentas foram utilizadas na construção deste projeto:
 
@@ -49,9 +45,7 @@ As seguintes ferramentas foram utilizadas na construção deste projeto:
 - [EmailJS](https://www.emailjs.com/)
 - [React-Toastify](https://fkhadra.github.io/react-toastify/)
 
-
 ---
-
 
 <h3 id="autor">Autor</h3>
 <img src="https://avatars.githubusercontent.com/dududornelees" height="100" />
