@@ -8,8 +8,8 @@ import { GlobalStyle } from "styles/Global";
 
 // Pages
 const Home = React.lazy(() => import("pages/Home/Home"));
-const Projetos = React.lazy(() => import("pages/Projetos/Projetos"));
-const Contato = React.lazy(() => import("pages/Contato/Contato"));
+const Projects = React.lazy(() => import("pages/Projects/Projects"));
+const Contact = React.lazy(() => import("pages/Contact/Contact"));
 
 const Routes: React.FC = () => {
   return (
@@ -31,7 +31,7 @@ const Routes: React.FC = () => {
             path="/projetos"
             element={
               <React.Suspense fallback={<Loading />}>
-                <Projetos />
+                <Projects />
               </React.Suspense>
             }
           />
@@ -40,7 +40,7 @@ const Routes: React.FC = () => {
             path="/contato"
             element={
               <React.Suspense fallback={<Loading />}>
-                <Contato />
+                <Contact />
               </React.Suspense>
             }
           />
