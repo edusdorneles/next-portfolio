@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { shade } from "polished";
 
-export const ContatoStyle = styled.div`
-    .contato__form__container {
+export const ContactStyle = styled.div`
+    .contact__form__container {
         .form__link-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;

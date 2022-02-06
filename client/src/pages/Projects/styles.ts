@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const ProjetosStyle = styled.div`
-  .projetos-card__container {
+export const ProjectsStyle = styled.div`
+  .projects-card__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 25px;
@@ -10,7 +10,7 @@ export const ProjetosStyle = styled.div`
 
   /* Adaptação para mobile */
   @media (max-width: 992px) {
-    .projetos-card__container {
+    .projects-card__container {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 15px;
       grid-row-gap: 15px;
@@ -18,7 +18,7 @@ export const ProjetosStyle = styled.div`
   }
 
   @media (max-width: 768px) {
-    .projetos-card__container {
+    .projects-card__container {
       grid-template-columns: 1fr;
       grid-column-gap: 10px;
       grid-row-gap: 10px;

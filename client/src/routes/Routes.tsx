@@ -12,8 +12,8 @@ import CheckUser from "middlewares/CheckUser";
 
 // Pages
 const Home = React.lazy(() => import("pages/Home/Home"));
-const Projetos = React.lazy(() => import("pages/Projetos/Projetos"));
-const Contato = React.lazy(() => import("pages/Contato/Contato"));
+const Projects = React.lazy(() => import("pages/Projects/Projects"));
+const Contact = React.lazy(() => import("pages/Contact/Contact"));
 const Admin = React.lazy(() => import("pages/Admin/Admin"));
 const Dashboard = React.lazy(() => import("pages/Dashboard/Dashboard"));
 
@@ -38,7 +38,7 @@ const Routes: React.FC = () => {
               path="/projects"
               element={
                 <React.Suspense fallback={<Loading />}>
-                  <Projetos />
+                  <Projects />
                 </React.Suspense>
               }
             />
@@ -47,7 +47,7 @@ const Routes: React.FC = () => {
               path="/contact"
               element={
                 <React.Suspense fallback={<Loading />}>
-                  <Contato />
+                  <Contact />
                 </React.Suspense>
               }
             />
