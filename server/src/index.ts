@@ -144,7 +144,7 @@ connect(
   `mongodb+srv://${dbUser}:${dbPass}@cluster0.uneus.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 )
   .then(() => {
-    app.listen(3002, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Servidor iniciado! 🚀");
     });
   })
