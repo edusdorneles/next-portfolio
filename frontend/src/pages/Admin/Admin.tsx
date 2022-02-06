@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TitleDesc from "components/TitleDesc/TitleDesc";
+import { useAuthContext } from "providers/AuthContext";
 
 // Styles
 import { AdminStyle } from "./styles";
@@ -8,6 +9,7 @@ import { Container } from "styles/Global";
 const Admin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { Login, error } = useAuthContext();
 
   return (
     <AdminStyle>
@@ -35,7 +37,20 @@ const Admin = () => {
               onChange={(e: any) => setPassword(e.target.value)}
             />
 
-            <button type="button">Entrar</button>
+            <button
+              type="button"
+              onClick={() => {
+                Login(email, password);
+              }}
+            >
+              Entrar
+            </button>
+
+            <div
+              className={error ? "error__container active" : "error__container"}
+            >
+              {error}
+            </div>
           </form>
         </div>
       </Container>

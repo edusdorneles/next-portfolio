@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 import Layout from "components/Layout";
 import Loading from "components/Loading/Loading";
+import { AuthContextProvider } from "providers/AuthContext";
 
 // Styles
 import { GlobalStyle } from "styles/Global";
@@ -21,56 +22,58 @@ const Routes: React.FC = () => {
     <BrowserRouter>
       <GlobalStyle />
 
-      <Layout>
-        <Switch>
-          <Route
-            path="/"
-            element={
-              <React.Suspense fallback={<Loading />}>
-                <Home />
-              </React.Suspense>
-            }
-          />
+      <AuthContextProvider>
+        <Layout>
+          <Switch>
+            <Route
+              path="/"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <Home />
+                </React.Suspense>
+              }
+            />
 
-          <Route
-            path="/projects"
-            element={
-              <React.Suspense fallback={<Loading />}>
-                <Projetos />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/projects"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <Projetos />
+                </React.Suspense>
+              }
+            />
 
-          <Route
-            path="/contact"
-            element={
-              <React.Suspense fallback={<Loading />}>
-                <Contato />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/contact"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <Contato />
+                </React.Suspense>
+              }
+            />
 
-          <Route
-            path="/admin"
-            element={
-              <React.Suspense fallback={<Loading />}>
-                <Admin />
-              </React.Suspense>
-            }
-          />
+            <Route
+              path="/admin"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <Admin />
+                </React.Suspense>
+              }
+            />
 
-          <Route
-            path="/dashboard"
-            element={
-              <React.Suspense fallback={<Loading />}>
-                <CheckUser>
-                  <Dashboard />
-                </CheckUser>
-              </React.Suspense>
-            }
-          />
-        </Switch>
-      </Layout>
+            <Route
+              path="/dashboard"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <CheckUser>
+                    <Dashboard />
+                  </CheckUser>
+                </React.Suspense>
+              }
+            />
+          </Switch>
+        </Layout>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 };

@@ -15,6 +15,7 @@ export const AdminStyle = styled.main`
         padding: 8px;
         border-radius: 5px;
         font-family: "Josefin Sans", sans-serif;
+
         &:focus {
           outline: 1px solid ${(props) => props.theme.colors.secondary};
         }
@@ -30,8 +31,26 @@ export const AdminStyle = styled.main`
         border: 1px solid #252525;
         cursor: pointer;
         font-family: "Josefin Sans", sans-serif;
+
         &:hover {
           background-color: ${(props) => props.theme.colors.secondaryHover};
+        }
+      }
+
+      .error__container {
+        border: 1px solid ${(props) => props.theme.colors.secondary};
+        transition: ${(props) => props.theme.transition};
+        border-radius: 5px;
+        height: 34px;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.active {
+          visibility: visible;
+          opacity: 1;
         }
       }
     }
