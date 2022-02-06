@@ -51,6 +51,17 @@ export const NavStyle = styled.nav`
     }
   }
 
+  .navbar__desktop {
+    li a {
+      &.active {
+        background-color: ${(props) => props.theme.colors.secondary};
+        border-radius: 5px;
+        padding: 6px;
+        color: white;
+      }
+    }
+  }
+
   .navbar__mobile {
     display: none;
 

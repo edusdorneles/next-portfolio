@@ -4,8 +4,6 @@ export const DefaultTheme = {
   colors: {
     primary: "#14141C",
     secondary: "#0E79B2",
-    secondaryHover: "#0c6a9c",
-
     background: "#191923",
     text: "#FFFFFF",
   },

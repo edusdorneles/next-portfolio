@@ -4,8 +4,8 @@ import { TitleDescStyle } from "./styles";
 // Interface
 interface Props {
   title: string;
-  firstDesc: string;
-  secondDesc: string;
+  firstDesc?: string;
+  secondDesc?: string;
 }
 
 const TitleDesc: React.FC<Props> = (props) => {
