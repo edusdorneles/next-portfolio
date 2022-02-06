@@ -1,12 +1,13 @@
 import dotenv from "dotenv";
 import { connect } from "mongoose";
-import express, { Request, response, Response } from "express";
+import express, { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import cors from "cors";
 
 // Middlewares
 import checkToken from "./middlewares/checkToken";
+import requestLimiter from "./middlewares/requestLimiter";
 
 // Models
 import User from "./models/User";
@@ -81,49 +82,53 @@ app.post(
 );
 
 // Public - Login user
-app.post("/admin/login", async (req: Request, res: Response) => {
-  const { email, password } = req.body;
+app.post(
+  "/admin/login",
+  requestLimiter,
+  async (req: Request, res: Response) => {
+    const { email, password } = req.body;
 
-  // Validations
-  if (!email) {
-    return res.status(422).json({ message: "O email é obrigatório." });
-  } else if (!password) {
-    return res.status(422).json({ message: "A senha é obrigatória." });
+    // Validations
+    if (!email) {
+      return res.status(422).json({ message: "O email é obrigatório." });
+    } else if (!password) {
+      return res.status(422).json({ message: "A senha é obrigatória." });
+    }
+
+    // Check if user exists
+    const userExists = await User.findOne({ email: email });
+
+    if (!userExists) {
+      return res.status(404).json({ message: "Usuário não encontrado." });
+    }
+
+    // Check if password match
+    const checkPassword = await bcrypt.compare(password, userExists.password);
+
+    if (!checkPassword) {
+      return res.status(422).json({ message: "Senha inválida." });
+    }
+
+    try {
+      const secret: any = process.env.SECRET;
+
+      const token = jwt.sign(
+        {
+          id: userExists._id,
+        },
+        secret
+      );
+
+      res
+        .status(200)
+        .json({ message: "Autenticação realizada com sucesso!", token });
+    } catch (err) {
+      res
+        .status(500)
+        .json({ message: "Erro no servidor! Tente novamente mais tarde." });
+    }
   }
-
-  // Check if user exists
-  const userExists = await User.findOne({ email: email });
-
-  if (!userExists) {
-    return res.status(404).json({ message: "Usuário não encontrado." });
-  }
-
-  // Check if password match
-  const checkPassword = await bcrypt.compare(password, userExists.password);
-
-  if (!checkPassword) {
-    return res.status(422).json({ message: "Senha inválida." });
-  }
-
-  try {
-    const secret: any = process.env.SECRET;
-
-    const token = jwt.sign(
-      {
-        id: userExists._id,
-      },
-      secret
-    );
-
-    res
-      .status(200)
-      .json({ message: "Autenticação realizada com sucesso!", token });
-  } catch (err) {
-    res
-      .status(500)
-      .json({ message: "Erro no servidor! Tente novamente mais tarde." });
-  }
-});
+);
 
 // Credentials
 const dbUser = process.env.DB_USER;
@@ -137,6 +142,6 @@ connect(
       console.log("Servidor iniciado! 🚀");
     });
   })
-  .catch((err: any) => {
+  .catch((err) => {
     console.log(`Erro: ${err}`);
   });
