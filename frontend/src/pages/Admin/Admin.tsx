@@ -11,6 +11,12 @@ const Admin = () => {
   const [password, setPassword] = useState("");
   const { Login, error } = useAuthContext();
 
+  const enterKeyHandler = (key: React.KeyboardEvent) => {
+    if (key.key === "Enter") {
+      Login(email, password); 
+    }
+  };
+
   return (
     <AdminStyle>
       <Container className="admin__container">
@@ -20,7 +26,7 @@ const Admin = () => {
         />
 
         <div className="admin__form__container">
-          <form>
+          <form onKeyPress={(key) => enterKeyHandler(key)}>
             <input
               name="email"
               type="email"

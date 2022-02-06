@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { shade } from "polished";
 
 export const AdminStyle = styled.main`
   .admin__container {
@@ -33,7 +34,9 @@ export const AdminStyle = styled.main`
         font-family: "Josefin Sans", sans-serif;
 
         &:hover {
-          background-color: ${(props) => props.theme.colors.secondaryHover};
+          background-color: ${(props) =>
+            shade(0.3, props.theme.colors.secondary)};
+          }
         }
       }
 

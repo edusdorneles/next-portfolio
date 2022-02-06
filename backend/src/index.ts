@@ -20,6 +20,8 @@ app.use(cors());
 
 // Private - Welcome
 app.get("/dashboard", checkToken, async (req: Request, res: Response) => {
+  const user = await User.find;
+
   return res.status(200).json({ message: "Bem-vindo!" });
 });
 
@@ -119,9 +121,13 @@ app.post(
         secret
       );
 
-      res
-        .status(200)
-        .json({ message: "Autenticação realizada com sucesso!", token });
+      const userName = userExists.name;
+
+      res.status(200).json({
+        message: "Autenticação realizada com sucesso!",
+        userName,
+        token,
+      });
     } catch (err) {
       res
         .status(500)

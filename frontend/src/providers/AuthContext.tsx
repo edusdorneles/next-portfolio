@@ -35,6 +35,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
         password: password,
       })
       .then((res) => {
+        localStorage.setItem("user-name", res.data.userName);
         localStorage.setItem("auth-token", res.data.token);
         navigate("/dashboard");
       })

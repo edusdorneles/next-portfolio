@@ -24,8 +24,7 @@ const CheckUser: React.FC = ({ children }) => {
           console.log(res.data.message);
         })
         .catch((err) => {
-          const error = err.response.data;
-          setError(error.message);
+          setError(err.response.data.message);
           navigate("/admin");
         });
     }

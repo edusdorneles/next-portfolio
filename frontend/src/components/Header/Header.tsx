@@ -11,13 +11,12 @@ import { FaPencilRuler } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Header: React.FC = () => {
-  const location = useLocation();
-  const [active, setActive] = useState(location.pathname);
+  const { pathname } = useLocation();
+  const [active, setActive] = useState(pathname);
 
-  // Sempre que a localização mudar, atualiza o estado de "active"
   useEffect(() => {
-    setActive(location.pathname);
-  }, [location]);
+    setActive(pathname);
+  }, [pathname]);
 
   return (
     <HeaderStyle>
@@ -29,41 +28,65 @@ const Header: React.FC = () => {
         </div>
 
         <NavStyle>
-          <ul className="navbar__desktop">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projetos</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contato</Link>
-            </li>
-          </ul>
+          {!pathname.includes("/dashboard") ? (
+            <>
+              <ul className="navbar__desktop">
+                <li>
+                  <Link to="/" className={active === "/" ? "active" : ""}>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/projects"
+                    className={active === "/projects" ? "active" : ""}
+                  >
+                    Projetos
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className={active === "/contact" ? "active" : ""}
+                  >
+                    Contato
+                  </Link>
+                </li>
+              </ul>
 
-          <ul className="navbar__mobile">
-            <li>
-              <Link to="/" className={active === "/" ? "active" : ""}>
-                <FaHome />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/projetos"
-                className={active === "/projetos" ? "active" : ""}
-              >
-                <FaPencilRuler />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contato"
-                className={active === "/contato" ? "active" : ""}
-              >
-                <MdEmail />
-              </Link>
-            </li>
-          </ul>
+              <ul className="navbar__mobile">
+                <li>
+                  <Link to="/" className={active === "/" ? "active" : ""}>
+                    <FaHome />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/projects"
+                    className={active === "/projects" ? "active" : ""}
+                  >
+                    <FaPencilRuler />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className={active === "/contact" ? "active" : ""}
+                  >
+                    <MdEmail />
+                  </Link>
+                </li>
+              </ul>
+            </>
+          ) : (
+            <ul>
+              <li>
+                <Link to="/dashboard">
+                  Olá, {localStorage.getItem("user-name")?.split(" ")[0]}!
+                </Link>
+              </li>
+            </ul>
+          )}
         </NavStyle>
       </Container>
     </HeaderStyle>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { shade } from "polished";
 
 export const ContatoStyle = styled.div`
     .contato__form__container {
@@ -10,20 +11,22 @@ export const ContatoStyle = styled.div`
             margin-bottom: 15px;
 
             > a {
-                color: ${props => props.theme.colors.text};
-                font-size: ${props => props.theme.fontSize.medium};
-                background-color: ${props => props.theme.colors.secondary};
-                transition: ${props => props.theme.transition};
+                color: ${(props) => props.theme.colors.text};
+                font-size: ${(props) => props.theme.fontSize.medium};
+                background-color: ${(props) => props.theme.colors.secondary};
+                transition: ${(props) => props.theme.transition};
                 text-decoration: none;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: row;
                 padding: 8px;
-                border-radius: 5px;            
+                border-radius: 5px;
 
                 &:hover {
-                    background-color: ${props => props.theme.colors.secondaryHover};
+                    background-color: ${(props) =>
+                      shade(0.3, props.theme.colors.secondary)};
+                    }
                 }
 
                 > * {
@@ -38,9 +41,9 @@ export const ContatoStyle = styled.div`
             grid-row-gap: 15px;
 
             input, textarea {
-                color: ${props => props.theme.colors.text};
-                font-size: ${props => props.theme.fontSize.medium};
-                background-color: ${props => props.theme.colors.primary};
+                color: ${(props) => props.theme.colors.text};
+                font-size: ${(props) => props.theme.fontSize.medium};
+                background-color: ${(props) => props.theme.colors.primary};
                 border: 1px solid #252525;
                 padding: 8px;
                 border-radius: 5px;
@@ -48,15 +51,16 @@ export const ContatoStyle = styled.div`
                 font-family: 'Josefin Sans', sans-serif;
 
                 &:focus {
-                    outline: 1px solid ${props => props.theme.colors.secondary};
+                    outline: 1px solid ${(props) =>
+                      props.theme.colors.secondary};
                 }
             }
 
             button {
-                color: ${props => props.theme.colors.text};
-                font-size: ${props => props.theme.fontSize.medium};
-                background-color: ${props => props.theme.colors.secondary};
-                transition: ${props => props.theme.transition};
+                color: ${(props) => props.theme.colors.text};
+                font-size: ${(props) => props.theme.fontSize.medium};
+                background-color: ${(props) => props.theme.colors.secondary};
+                transition: ${(props) => props.theme.transition};
                 padding: 8px;
                 border-radius: 5px;
                 border: 1px solid #252525;
@@ -64,7 +68,9 @@ export const ContatoStyle = styled.div`
                 font-family: 'Josefin Sans', sans-serif;
 
                 &:hover {
-                    background-color: ${props => props.theme.colors.secondaryHover};
+                    background-color: ${(props) =>
+                      shade(0.3, props.theme.colors.secondary)};
+                    }
                 }
             }
         }
