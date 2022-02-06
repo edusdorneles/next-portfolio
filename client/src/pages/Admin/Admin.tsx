@@ -13,7 +13,7 @@ const Admin = () => {
 
   const enterKeyHandler = (key: React.KeyboardEvent) => {
     if (key.key === "Enter") {
-      Login(email, password); 
+      Login(email, password);
     }
   };
 

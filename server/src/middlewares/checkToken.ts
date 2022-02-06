@@ -6,7 +6,7 @@ const checkToken = (req: Request, res: Response, next: NextFunction) => {
 
   const token = authHeader && authHeader.split(" ")[1];
 
-  if(!token) {
+  if (!token) {
     return res.status(401).json({ message: "Acesso negado." });
   }
 
@@ -19,6 +19,6 @@ const checkToken = (req: Request, res: Response, next: NextFunction) => {
   } catch (err) {
     return res.status(400).json({ message: "Token inválido." });
   }
-}
+};
 
 export default checkToken;
