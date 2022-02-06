@@ -6,11 +6,15 @@ import Loading from "components/Loading/Loading";
 // Styles
 import { GlobalStyle } from "styles/Global";
 
+// Middlewares
+import CheckUser from "middlewares/CheckUser";
+
 // Pages
 const Home = React.lazy(() => import("pages/Home/Home"));
 const Projetos = React.lazy(() => import("pages/Projetos/Projetos"));
 const Contato = React.lazy(() => import("pages/Contato/Contato"));
 const Admin = React.lazy(() => import("pages/Admin/Admin"));
+const Dashboard = React.lazy(() => import("pages/Dashboard/Dashboard"));
 
 const Routes: React.FC = () => {
   return (
@@ -51,6 +55,17 @@ const Routes: React.FC = () => {
             element={
               <React.Suspense fallback={<Loading />}>
                 <Admin />
+              </React.Suspense>
+            }
+          />
+
+          <Route
+            path="/dashboard"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <CheckUser>
+                  <Dashboard />
+                </CheckUser>
               </React.Suspense>
             }
           />
