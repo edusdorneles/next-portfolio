@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Routes as Switch,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes as Switch, Route, Navigate } from "react-router-dom";
 import Layout from "components/Layout";
 import Loading from "components/Loading/Loading";
 import { AuthContextProvider } from "providers/AuthContext";
@@ -20,7 +15,11 @@ const Home = React.lazy(() => import("pages/Home/Home"));
 const Projects = React.lazy(() => import("pages/Projects/Projects"));
 const Contact = React.lazy(() => import("pages/Contact/Contact"));
 const Admin = React.lazy(() => import("pages/Admin/Admin"));
+
+// Private pages
 const Dashboard = React.lazy(() => import("pages/Dashboard/Dashboard"));
+const DashProjects = React.lazy(() => import("pages/Dashboard/Projects/Projects"));
+const DashUsers = React.lazy(() => import("pages/Dashboard/Users/Users"));
 
 const Routes: React.FC = () => {
   return (
@@ -81,6 +80,24 @@ const Routes: React.FC = () => {
                 element={
                   <React.Suspense fallback={<Loading />}>
                     <Dashboard />
+                  </React.Suspense>
+                }
+              />
+
+              <Route
+                path="/dashboard/projects"
+                element={
+                  <React.Suspense fallback={<Loading />}>
+                    <DashProjects />
+                  </React.Suspense>
+                }
+              />
+
+              <Route
+                path="/dashboard/users"
+                element={
+                  <React.Suspense fallback={<Loading />}>
+                    <DashUsers />
                   </React.Suspense>
                 }
               />
