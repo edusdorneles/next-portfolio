@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthContext } from "providers/AuthContext";
 
@@ -10,7 +10,7 @@ const CheckUser: React.FC = ({ children }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (pathname !== "/admin") {
       const authToken = localStorage.getItem("auth-token");
 
