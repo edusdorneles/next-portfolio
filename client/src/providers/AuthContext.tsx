@@ -29,7 +29,9 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(
+    localStorage.getItem("auth-token") ? true : false
+  );
 
   const Login = (email: string, password: string) => {
     setError("");
