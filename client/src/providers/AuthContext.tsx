@@ -10,6 +10,8 @@ type ContextValue = {
   Logout: () => void;
   error: string;
   setError: React.Dispatch<SetStateAction<string>>;
+  isAuth: boolean;
+  setIsAuth: React.Dispatch<SetStateAction<boolean>>;
 };
 
 const DefaultValues = {
@@ -17,6 +19,8 @@ const DefaultValues = {
   Logout: () => {},
   error: "",
   setError: () => {},
+  isAuth: false,
+  setIsAuth: () => {},
 };
 
 export const AuthContext = createContext<ContextValue>(DefaultValues);
@@ -25,6 +29,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
+  const [isAuth, setIsAuth] = useState(false);
 
   const Login = (email: string, password: string) => {
     setError("");
@@ -37,24 +42,31 @@ export const AuthContextProvider: React.FC = ({ children }) => {
       .then((res) => {
         localStorage.setItem("user-name", res.data.userName);
         localStorage.setItem("auth-token", res.data.token);
+        setIsAuth(true);
         navigate("/dashboard");
       })
       .catch((err) => {
-        const error = err.response.data;
-        setError(error.message);
+        setError(err.response.data.message);
+        setIsAuth(false);
       });
   };
 
   const Logout = () => {
     localStorage.clear();
+    setIsAuth(false);
     navigate("/admin");
   };
 
-  return (
-    <AuthContext.Provider value={{ Login, Logout, error, setError }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  const value = {
+    Login,
+    Logout,
+    error,
+    setError,
+    isAuth,
+    setIsAuth,
+  };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
 export const useAuthContext = () => useContext(AuthContext);

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes as Switch,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Layout from "components/Layout";
 import Loading from "components/Loading/Loading";
 import { AuthContextProvider } from "providers/AuthContext";
@@ -8,7 +13,7 @@ import { AuthContextProvider } from "providers/AuthContext";
 import { GlobalStyle } from "styles/Global";
 
 // Middlewares
-import CheckUser from "middlewares/CheckUser";
+import CheckAuth from "middlewares/CheckAuth";
 
 // Pages
 const Home = React.lazy(() => import("pages/Home/Home"));
@@ -62,15 +67,24 @@ const Routes: React.FC = () => {
             />
 
             <Route
-              path="/dashboard"
+              path="*"
               element={
                 <React.Suspense fallback={<Loading />}>
-                  <CheckUser>
-                    <Dashboard />
-                  </CheckUser>
+                  <Navigate to="/" />
                 </React.Suspense>
               }
             />
+
+            <Route element={<CheckAuth />}>
+              <Route
+                path="/dashboard"
+                element={
+                  <React.Suspense fallback={<Loading />}>
+                    <Dashboard />
+                  </React.Suspense>
+                }
+              />
+            </Route>
           </Switch>
         </Layout>
       </AuthContextProvider>
