@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "typeRoots": ["src/@types"]
   },
   "files": ["src/styles/Styled.d.ts"],
   "include": ["src"]

@@ -10,7 +10,7 @@ import { Container } from "styles/Global";
 import { FaPencilRuler } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   const { Logout } = useAuthContext();
 
   return (

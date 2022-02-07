@@ -6,7 +6,7 @@ import { useAuthContext } from "providers/AuthContext";
 import { AdminStyle } from "./styles";
 import { Container } from "styles/Global";
 
-const Admin = () => {
+const Admin: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { Login, error } = useAuthContext();
@@ -52,9 +52,7 @@ const Admin = () => {
               Entrar
             </button>
 
-            <div
-              className={error ? "error__container active" : "error__container"}
-            >
+            <div className={error ? "error__container active" : "error__container"}>
               {error}
             </div>
           </form>
