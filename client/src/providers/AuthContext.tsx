@@ -37,7 +37,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
     setError("");
 
     api
-      .post("/admin/login", {
+      .post("/dashboard/login", {
         email: email,
         password: password,
       })

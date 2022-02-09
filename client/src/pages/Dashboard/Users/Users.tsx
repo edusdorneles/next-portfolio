@@ -9,6 +9,9 @@ import { api } from "services/API";
 import { UsersStyle } from "./styles";
 import { Container } from "styles/Global";
 
+// Icons
+import { BsPlusLg } from "react-icons/bs";
+
 const Users: React.FC = () => {
   const [users, setUsers] = useState<User[]>();
 
@@ -45,6 +48,10 @@ const Users: React.FC = () => {
           {users?.map((user: User) => {
             return <UserCard name={user.name} email={user.email} id={user.id} />;
           })}
+
+          <div className="user-cards__new-user">
+            <BsPlusLg />
+          </div>
         </div>
       </Container>
     </UsersStyle>
