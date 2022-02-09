@@ -52,7 +52,9 @@ const Admin: React.FC = () => {
               Entrar
             </button>
 
-            <div className={error ? "error__container active" : "error__container"}>
+            <div
+              className={error ? "error__container active" : "error__container"}
+            >
               {error}
             </div>
           </form>

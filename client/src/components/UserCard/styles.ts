@@ -37,7 +37,8 @@ export const UserCardStyle = styled.div`
       cursor: pointer;
 
       &:hover {
-        background-color: ${(props) => shade(0.3, props.theme.colors.secondary)};
+        background-color: ${(props) =>
+          shade(0.3, props.theme.colors.secondary)};
       }
 
       &:last-child {

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter, Routes as Switch, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes as Switch,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Layout from "components/Layout";
 import Loading from "components/Loading/Loading";
 import { AuthContextProvider } from "providers/AuthContext";
@@ -18,7 +23,9 @@ const Admin = React.lazy(() => import("pages/Admin/Admin"));
 
 // Private pages
 const Dashboard = React.lazy(() => import("pages/Dashboard/Dashboard"));
-const DashProjects = React.lazy(() => import("pages/Dashboard/Projects/Projects"));
+const DashProjects = React.lazy(
+  () => import("pages/Dashboard/Projects/Projects")
+);
 const DashUsers = React.lazy(() => import("pages/Dashboard/Users/Users"));
 
 const Routes: React.FC = () => {
