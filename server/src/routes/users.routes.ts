@@ -72,46 +72,42 @@ usersRouter.get("/users", checkToken, async (req: Request, res: Response) => {
 });
 
 // Private - Register user
-usersRouter.post(
-  "/register",
-  checkToken,
-  async (req: Request, res: Response) => {
-    const { name, email, password, confirmPassword } = req.body;
+usersRouter.post("/users/register", async (req: Request, res: Response) => {
+  const { name, email, password, confirmPassword } = req.body;
 
-    if (!name) {
-      return res.status(422).json({ message: "O nome é obrigatório." });
-    } else if (!email) {
-      return res.status(422).json({ message: "O email é obrigatório." });
-    } else if (!password) {
-      return res.status(422).json({ message: "A senha é obrigatória." });
-    } else if (password !== confirmPassword) {
-      return res.status(422).json({ message: "As senhas não conferem." });
-    }
-
-    const userExists = await User.findOne({ email: email });
-
-    if (userExists) {
-      return res.status(422).json({ message: "Email já existente." });
-    }
-
-    const salt = await genSalt(12);
-    const passwordHash = await hash(password, salt);
-
-    const user = new User({
-      name,
-      email,
-      password: passwordHash,
-    });
-
-    try {
-      await user.save();
-      res.status(201).json({ message: "Usuário cadastrado com sucesso." });
-    } catch (err) {
-      res
-        .status(500)
-        .json({ message: "Erro no servidor! Tente novamente mais tarde." });
-    }
+  if (!name) {
+    return res.status(422).json({ message: "O nome é obrigatório." });
+  } else if (!email) {
+    return res.status(422).json({ message: "O email é obrigatório." });
+  } else if (!password) {
+    return res.status(422).json({ message: "A senha é obrigatória." });
+  } else if (password !== confirmPassword) {
+    return res.status(422).json({ message: "As senhas não conferem." });
   }
-);
+
+  const userExists = await User.findOne({ email: email });
+
+  if (userExists) {
+    return res.status(422).json({ message: "Email já existente." });
+  }
+
+  const salt = await genSalt(12);
+  const passwordHash = await hash(password, salt);
+
+  const user = new User({
+    name,
+    email,
+    password: passwordHash,
+  });
+
+  try {
+    await user.save();
+    res.status(201).json({ message: "Usuário cadastrado com sucesso." });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: "Erro no servidor! Tente novamente mais tarde." });
+  }
+});
 
 export default usersRouter;

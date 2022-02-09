@@ -20,6 +20,10 @@ export const AdminStyle = styled.main`
         &:focus {
           outline: 1px solid ${(props) => props.theme.colors.secondary};
         }
+
+        &::-ms-reveal {
+          filter: invert(100%);
+        }
       }
 
       button {
