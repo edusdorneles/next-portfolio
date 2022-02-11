@@ -19,6 +19,7 @@ type ContextValue = {
     setConfirmPassword: any,
     setModalActive: any
   ) => void;
+  deleteUser: (id: number, setModalActive: any) => void;
 };
 
 const DefaultValues = {
@@ -28,6 +29,7 @@ const DefaultValues = {
   message: "",
   setMessage: () => {},
   createUser: () => {},
+  deleteUser: () => {},
 };
 
 export const UsersContext = createContext<ContextValue>(DefaultValues);
@@ -36,15 +38,9 @@ export const UsersContextProvider: React.FC = ({ children }) => {
   const [users, setUsers] = useState();
   const [message, setMessage] = useState("");
 
-  const authToken = localStorage.getItem("auth-token");
-
   const fetchData = () => {
     api
-      .get("/dashboard/users", {
-        headers: {
-          Authorization: `Baerer ${authToken}`,
-        },
-      })
+      .get("/dashboard/users")
       .then((res) => {
         setUsers(res.data.users);
       })
@@ -81,26 +77,50 @@ export const UsersContextProvider: React.FC = ({ children }) => {
         setConfirmPassword("");
 
         setTimeout(() => {
+          setMessage("");
           setModalActive(false);
           fetchData();
-        }, 3000);
+        }, 2000);
       })
       .catch((err) => {
         setMessage(err.response.data.message);
       });
   };
 
-  const value = {
-    fetchData,
-    users,
-    setUsers,
-    message,
-    setMessage,
-    createUser,
+  const deleteUser = (
+    id: number,
+    setModalActive: (modalActive: boolean) => {}
+  ) => {
+    api
+      .delete(`/dashboard/users/delete/${id}`)
+      .then((res) => {
+        setMessage(res.data.message);
+
+        setTimeout(() => {
+          setMessage("");
+          setModalActive(false);
+          fetchData();
+        }, 2000);
+      })
+      .catch((err) => {
+        setMessage(err.response.data.message);
+      });
   };
 
   return (
-    <UsersContext.Provider value={value}>{children}</UsersContext.Provider>
+    <UsersContext.Provider
+      value={{
+        fetchData,
+        users,
+        setUsers,
+        message,
+        setMessage,
+        createUser,
+        deleteUser,
+      }}
+    >
+      {children}
+    </UsersContext.Provider>
   );
 };
 

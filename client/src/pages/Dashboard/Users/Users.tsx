@@ -38,7 +38,12 @@ const Users: React.FC = () => {
         <div className="users__cards">
           {users?.map((user: User) => {
             return (
-              <UserCard name={user.name} email={user.email} id={user.id} />
+              <UserCard
+                _id={user._id}
+                name={user.name}
+                email={user.email}
+                key={user._id}
+              />
             );
           })}
 

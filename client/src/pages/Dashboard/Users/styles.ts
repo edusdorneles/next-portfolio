@@ -77,6 +77,7 @@ export const UsersStyle = styled.main`
       transition: ${(props) => props.theme.transition};
       border-radius: 5px;
       height: 34px;
+      display: none;
       visibility: hidden;
       opacity: 0;      
 

@@ -110,4 +110,27 @@ usersRouter.post("/users/register", async (req: Request, res: Response) => {
   }
 });
 
+// Private - Delete user
+usersRouter.delete(
+  "/users/delete/:id",
+  checkToken,
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+
+    const user = await User.findOne({ _id: id });
+
+    if (!user) {
+      return res.status(404).json({ message: "Usuário não identificado." });
+    }
+
+    const deleteUser = await User.deleteOne({ _id: id });
+
+    if (!deleteUser) {
+      return res.status(400).json({ message: "Erro na deleção do usuário." });
+    }
+
+    return res.status(201).json({ message: "Usuário deletado com sucesso." });
+  }
+);
+
 export default usersRouter;
