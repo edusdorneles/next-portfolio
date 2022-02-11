@@ -19,7 +19,13 @@ type ContextValue = {
     setConfirmPassword: any,
     setModalActive: any
   ) => void;
-  deleteUser: (id: number, setModalActive: any) => void;
+  deleteUser: (id: number, setDeleteModalActive: any) => void;
+  updateUser: (
+    id: number,
+    name: string,
+    email: string,
+    setUpdateModalActive: any
+  ) => void;
 };
 
 const DefaultValues = {
@@ -30,6 +36,7 @@ const DefaultValues = {
   setMessage: () => {},
   createUser: () => {},
   deleteUser: () => {},
+  updateUser: () => {},
 };
 
 export const UsersContext = createContext<ContextValue>(DefaultValues);
@@ -89,7 +96,7 @@ export const UsersContextProvider: React.FC = ({ children }) => {
 
   const deleteUser = (
     id: number,
-    setModalActive: (modalActive: boolean) => {}
+    setDeleteModalActive: (deleteModalActive: boolean) => {}
   ) => {
     api
       .delete(`/dashboard/users/delete/${id}`)
@@ -98,7 +105,32 @@ export const UsersContextProvider: React.FC = ({ children }) => {
 
         setTimeout(() => {
           setMessage("");
-          setModalActive(false);
+          setDeleteModalActive(false);
+          fetchData();
+        }, 2000);
+      })
+      .catch((err) => {
+        setMessage(err.response.data.message);
+      });
+  };
+
+  const updateUser = (
+    id: number,
+    name: string,
+    email: string,
+    setUpdateModalActive: (updateModalActive: boolean) => {}
+  ) => {
+    api
+      .put(`/dashboard/users/update/${id}`, {
+        name,
+        email,
+      })
+      .then((res) => {
+        setMessage(res.data.message);
+
+        setTimeout(() => {
+          setMessage("");
+          setUpdateModalActive(false);
           fetchData();
         }, 2000);
       })
@@ -117,6 +149,7 @@ export const UsersContextProvider: React.FC = ({ children }) => {
         setMessage,
         createUser,
         deleteUser,
+        updateUser,
       }}
     >
       {children}

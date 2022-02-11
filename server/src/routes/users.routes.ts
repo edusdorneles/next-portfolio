@@ -85,6 +85,10 @@ usersRouter.post("/users/register", async (req: Request, res: Response) => {
     return res.status(422).json({ message: "As senhas não conferem." });
   }
 
+  if (!email.includes("@") || !email.includes(".com")) {
+    return res.status(422).json({ message: "Insira um email válido." });
+  }
+
   const userExists = await User.findOne({ email: email });
 
   if (userExists) {
@@ -130,6 +134,43 @@ usersRouter.delete(
     }
 
     return res.status(201).json({ message: "Usuário deletado com sucesso." });
+  }
+);
+
+// Private - Update user
+usersRouter.put(
+  "/users/update/:id",
+  checkToken,
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { name, email } = req.body;
+
+    const user = await User.findOne({ _id: id });
+
+    if (!user) {
+      return res.status(404).json({ message: "Usuário não identificado." });
+    }
+
+    if (!name || !email) {
+      return res
+        .status(422)
+        .json({ message: "Preencha todas as informacões." });
+    }
+
+    if (!email.includes("@") || !email.includes(".com")) {
+      return res.status(422).json({ message: "Insira um email válido." });
+    }
+
+    const updateUser = await User.updateOne(
+      { _id: id },
+      { $set: { name: name, email: email } }
+    );
+
+    if (!updateUser) {
+      return res.status(400).json({ message: "Erro na edição do usuário." });
+    }
+
+    res.status(200).json({ message: "Usuário editado com sucesso." });
   }
 );
 

@@ -40,7 +40,6 @@ export const AdminStyle = styled.main`
         &:hover {
           background-color: ${(props) =>
             shade(0.3, props.theme.colors.secondary)};
-          }
         }
       }
 

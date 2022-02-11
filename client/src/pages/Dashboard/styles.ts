@@ -60,7 +60,6 @@ export const DashboardStyle = styled.main`
         &:hover {
           background-color: ${(props) =>
             shade(0.3, props.theme.colors.secondary)};
-          }
         }
       }
     }
@@ -68,7 +67,7 @@ export const DashboardStyle = styled.main`
 
   /* Adaptação para mobile */
   @media (max-width: 768px) {
-    .dashboard__container {      
+    .dashboard__container {
       .dashboard__areas__container {
         flex-direction: column;
 
