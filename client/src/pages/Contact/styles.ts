@@ -51,7 +51,7 @@ export const ContactStyle = styled.div`
         font-family: 'Josefin Sans', sans-serif;
 
         &:focus {
-            outline: 1px solid ${(props) => props.theme.colors.secondary};
+          outline: 1px solid ${(props) => props.theme.colors.secondary};
         }
       }
 

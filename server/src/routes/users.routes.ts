@@ -72,45 +72,64 @@ usersRouter.get("/users", checkToken, async (req: Request, res: Response) => {
 });
 
 // Private - Register user
-usersRouter.post(
-  "/register",
+usersRouter.post("/users/register", async (req: Request, res: Response) => {
+  const { name, email, password, confirmPassword } = req.body;
+
+  if (!name) {
+    return res.status(422).json({ message: "O nome é obrigatório." });
+  } else if (!email) {
+    return res.status(422).json({ message: "O email é obrigatório." });
+  } else if (!password) {
+    return res.status(422).json({ message: "A senha é obrigatória." });
+  } else if (password !== confirmPassword) {
+    return res.status(422).json({ message: "As senhas não conferem." });
+  }
+
+  const userExists = await User.findOne({ email: email });
+
+  if (userExists) {
+    return res.status(422).json({ message: "Email já existente." });
+  }
+
+  const salt = await genSalt(12);
+  const passwordHash = await hash(password, salt);
+
+  const user = new User({
+    name,
+    email,
+    password: passwordHash,
+  });
+
+  try {
+    await user.save();
+    res.status(201).json({ message: "Usuário cadastrado com sucesso." });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: "Erro no servidor! Tente novamente mais tarde." });
+  }
+});
+
+// Private - Delete user
+usersRouter.delete(
+  "/users/delete/:id",
   checkToken,
   async (req: Request, res: Response) => {
-    const { name, email, password, confirmPassword } = req.body;
+    const { id } = req.params;
 
-    if (!name) {
-      return res.status(422).json({ message: "O nome é obrigatório." });
-    } else if (!email) {
-      return res.status(422).json({ message: "O email é obrigatório." });
-    } else if (!password) {
-      return res.status(422).json({ message: "A senha é obrigatória." });
-    } else if (password !== confirmPassword) {
-      return res.status(422).json({ message: "As senhas não conferem." });
+    const user = await User.findOne({ _id: id });
+
+    if (!user) {
+      return res.status(404).json({ message: "Usuário não identificado." });
     }
 
-    const userExists = await User.findOne({ email: email });
+    const deleteUser = await User.deleteOne({ _id: id });
 
-    if (userExists) {
-      return res.status(422).json({ message: "Email já existente." });
+    if (!deleteUser) {
+      return res.status(400).json({ message: "Erro na deleção do usuário." });
     }
 
-    const salt = await genSalt(12);
-    const passwordHash = await hash(password, salt);
-
-    const user = new User({
-      name,
-      email,
-      password: passwordHash,
-    });
-
-    try {
-      await user.save();
-      res.status(201).json({ message: "Usuário cadastrado com sucesso." });
-    } catch (err) {
-      res
-        .status(500)
-        .json({ message: "Erro no servidor! Tente novamente mais tarde." });
-    }
+    return res.status(201).json({ message: "Usuário deletado com sucesso." });
   }
 );
 

@@ -32,7 +32,9 @@ const Admin: React.FC = () => {
               type="email"
               placeholder="Email:"
               value={email}
-              onChange={(e: any) => setEmail(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
             />
 
             <input
@@ -40,7 +42,9 @@ const Admin: React.FC = () => {
               type="password"
               placeholder="Senha:"
               value={password}
-              onChange={(e: any) => setPassword(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPassword(e.target.value)
+              }
             />
 
             <button

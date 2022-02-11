@@ -110,7 +110,9 @@ const Contact: React.FC = () => {
               type="nome"
               placeholder="Nome: *"
               value={nome}
-              onChange={(e: any) => setNome(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setNome(e.target.value)
+              }
             />
 
             <Input
@@ -118,7 +120,7 @@ const Contact: React.FC = () => {
               defaultCountry="BR"
               value={celular}
               onChange={(e: any) => {
-                setCelular(e);
+                setCelular(e.target.value);
               }}
             />
 
@@ -127,7 +129,9 @@ const Contact: React.FC = () => {
               type="email"
               placeholder="Email:"
               value={email}
-              onChange={(e: any) => setEmail(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
             />
 
             <textarea
@@ -135,7 +139,9 @@ const Contact: React.FC = () => {
               placeholder="Mensagem:"
               rows={10}
               value={mensagem}
-              onChange={(e: any) => setMensagem(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                setMensagem(e.target.value)
+              }
             />
 
             <button

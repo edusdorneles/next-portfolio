@@ -56,4 +56,42 @@ export const UserCardStyle = styled.div`
       }
     }
   }
+
+  .modal__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    text-align: center;
+
+    button {
+      color: ${(props) => props.theme.colors.text};
+      font-size: ${(props) => props.theme.fontSize.medium};
+      transition: ${(props) => props.theme.transition};
+      background-color: #ff0000;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #252525;
+      cursor: pointer;
+      font-family: "Josefin Sans", sans-serif;
+      width: 100%;
+
+      &:hover {
+        background-color: ${shade(0.5, "#FF0000")};
+      }
+    }
+
+    .modal__message {
+      border: 1px solid ${(props) => props.theme.colors.secondary};
+      transition: ${(props) => props.theme.transition};
+      border-radius: 5px;
+      height: 34px;
+      display: none;
+
+      &.modal__message--active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 `;

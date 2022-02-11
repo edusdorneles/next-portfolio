@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Layout from "components/Layout";
 import Loading from "components/Loading/Loading";
-import { AuthContextProvider } from "providers/AuthContext";
+import Providers from "providers/Providers";
 
 // Styles
 import { GlobalStyle } from "styles/Global";
@@ -33,7 +33,7 @@ const Routes: React.FC = () => {
     <BrowserRouter>
       <GlobalStyle />
 
-      <AuthContextProvider>
+      <Providers>
         <Layout>
           <Switch>
             <Route
@@ -111,7 +111,7 @@ const Routes: React.FC = () => {
             </Route>
           </Switch>
         </Layout>
-      </AuthContextProvider>
+      </Providers>
     </BrowserRouter>
   );
 };
