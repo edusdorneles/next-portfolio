@@ -63,7 +63,7 @@ const Users: React.FC = () => {
         modalActive={modalActive}
         setModalActive={setModalActive}
       >
-        <div className="modal__inputs">
+        <div className="modal__inner-container">
           <input
             type="text"
             placeholder="Nome:"

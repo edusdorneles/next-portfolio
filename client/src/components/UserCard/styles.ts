@@ -57,7 +57,7 @@ export const UserCardStyle = styled.div`
     }
   }
 
-  .modal__text {
+  .modal__inner-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 15px;
@@ -77,6 +77,15 @@ export const UserCardStyle = styled.div`
 
       &:hover {
         background-color: ${shade(0.5, "#FF0000")};
+      }
+    }
+
+    .modall__button--att {
+      background-color: ${(props) => props.theme.colors.secondary};
+
+      &:hover {
+        background-color: ${(props) =>
+          shade(0.3, props.theme.colors.secondary)};
       }
     }
 

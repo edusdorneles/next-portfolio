@@ -26,7 +26,6 @@ export const ContactStyle = styled.div`
         &:hover {
           background-color: ${(props) =>
             shade(0.3, props.theme.colors.secondary)};
-          }
         }
 
         * {
@@ -40,7 +39,8 @@ export const ContactStyle = styled.div`
       grid-template-columns: 1fr;
       grid-row-gap: 15px;
 
-      input, textarea {
+      input,
+      textarea {
         color: ${(props) => props.theme.colors.text};
         font-size: ${(props) => props.theme.fontSize.medium};
         background-color: ${(props) => props.theme.colors.primary};
@@ -48,7 +48,7 @@ export const ContactStyle = styled.div`
         padding: 8px;
         border-radius: 5px;
         resize: none;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
 
         &:focus {
           outline: 1px solid ${(props) => props.theme.colors.secondary};
@@ -64,12 +64,11 @@ export const ContactStyle = styled.div`
         border-radius: 5px;
         border: 1px solid #252525;
         cursor: pointer;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
 
         &:hover {
           background-color: ${(props) =>
             shade(0.3, props.theme.colors.secondary)};
-          }
         }
       }
     }

@@ -34,6 +34,10 @@ export const ModalStyle = styled.div`
 
     .modal__children {
       padding-top: 10px;
+
+      input {
+        color: #bbbbbb;
+      }
     }
 
     .modal__close {

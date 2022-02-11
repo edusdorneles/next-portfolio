@@ -30,7 +30,7 @@ export const UsersStyle = styled.main`
     }
   }
 
-  .modal__inputs {
+  .modal__inner-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 15px;
@@ -43,12 +43,12 @@ export const UsersStyle = styled.main`
       padding: 8px;
       border-radius: 5px;
       resize: none;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: "Josefin Sans", sans-serif;
 
       &:focus {
         outline: 1px solid ${(props) => props.theme.colors.secondary};
       }
-      
+
       &::-ms-reveal {
         filter: invert(100%);
       }
@@ -63,12 +63,11 @@ export const UsersStyle = styled.main`
       border-radius: 5px;
       border: 1px solid #252525;
       cursor: pointer;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: "Josefin Sans", sans-serif;
 
       &:hover {
         background-color: ${(props) =>
           shade(0.3, props.theme.colors.secondary)};
-        }
       }
     }
 
@@ -78,15 +77,11 @@ export const UsersStyle = styled.main`
       border-radius: 5px;
       height: 34px;
       display: none;
-      visibility: hidden;
-      opacity: 0;      
 
       &.modal__message--active {
         display: flex;
         align-items: center;
         justify-content: center;
-        visibility: visible;
-        opacity: 1;
       }
     }
   }

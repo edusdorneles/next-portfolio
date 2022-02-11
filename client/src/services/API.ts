@@ -7,3 +7,7 @@ export const api = Axios.create({
     Authorization: `Baerer ${localStorage.getItem("auth-token")}`,
   },
 });
+
+// Set the auth token for any request
+const authToken = localStorage.getItem("auth-token");
+Axios.defaults.headers.common["Authorization"] = `Baerer ${authToken}`;

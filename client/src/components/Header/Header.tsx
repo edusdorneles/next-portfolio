@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     <HeaderStyle>
       <Container className="header__container">
         <div className="header__logo">
-          <Link to="/">
+          <Link to={!pathname.includes("/dashboard") ? "/" : "/dashboard"}>
             <img src="/images/logo.png" alt="Eduardo Dorneles - Logo" />
           </Link>
         </div>
