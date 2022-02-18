@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut as logout,
   User,
 } from "firebase/auth";
 import { auth } from "Firebase";
@@ -18,10 +19,11 @@ import { auth } from "Firebase";
 // Types
 type ContextValue = {
   user: any;
-  setUser: React.Dispatch<SetStateAction<any>>;
-  signIn: (email: string, password: string) => void;
   error: string | null;
   setError: React.Dispatch<SetStateAction<null>>;
+  setUser: React.Dispatch<SetStateAction<any>>;
+  signIn: (email: string, password: string) => void;
+  signOut: () => void;
 };
 
 const DefaultValues = {
@@ -30,6 +32,7 @@ const DefaultValues = {
   error: null,
   setError: () => {},
   signIn: () => {},
+  signOut: () => {},
 };
 
 export const AuthContext = createContext<ContextValue>(DefaultValues);
@@ -48,6 +51,14 @@ export const AuthContextProvider: React.FC = ({ children }) => {
     }
   };
 
+  const signOut = async () => {
+    try {
+      await logout(auth);
+    } catch (err: any) {
+      console.log(err.mssage);
+    }
+  };
+
   useEffect(() => {
     const subscriber = onAuthStateChanged(auth, (user) => {
       setUser(user);
@@ -57,7 +68,9 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ signIn, user, setUser, error, setError }}>
+    <AuthContext.Provider
+      value={{ signIn, user, setUser, error, setError, signOut }}
+    >
       {children}
     </AuthContext.Provider>
   );

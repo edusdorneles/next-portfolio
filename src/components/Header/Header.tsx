@@ -81,9 +81,7 @@ const Header: React.FC = () => {
           ) : (
             <ul>
               <li>
-                <Link to="/dashboard">
-                  Olá, {localStorage.getItem("user-name")?.split(" ")[0]}!
-                </Link>
+                <Link to="/dashboard">Olá, admin!</Link>
               </li>
             </ul>
           )}

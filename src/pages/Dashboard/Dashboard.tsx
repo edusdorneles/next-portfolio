@@ -11,7 +11,7 @@ import { FaPencilRuler } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
 const Dashboard: React.FC = () => {
-  const { Logout } = useAuthContext();
+  const { signOut } = useAuthContext();
 
   return (
     <DashboardStyle>
@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
           <button
             type="button"
             onClick={() => {
-              Logout();
+              signOut();
             }}
           >
             Sair
