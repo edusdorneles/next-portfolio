@@ -7,13 +7,13 @@ import { AdminStyle } from "./styles";
 import { Container } from "styles/Global";
 
 const Admin: React.FC = () => {
+  const { signIn, error } = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { Login, error } = useAuthContext();
 
   const enterKeyHandler = (key: React.KeyboardEvent) => {
     if (key.key === "Enter") {
-      Login(email, password);
+      signIn(email, password);
     }
   };
 
@@ -50,7 +50,7 @@ const Admin: React.FC = () => {
             <button
               type="button"
               onClick={() => {
-                Login(email, password);
+                signIn(email, password);
               }}
             >
               Entrar

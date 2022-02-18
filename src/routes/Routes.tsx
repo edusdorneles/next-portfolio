@@ -13,7 +13,7 @@ import Providers from "providers/Providers";
 import { GlobalStyle } from "styles/Global";
 
 // Middlewares
-import CheckAuth from "middlewares/CheckAuth";
+import CheckUserAuth from "middlewares/CheckUserAuth";
 
 // Pages
 const Home = React.lazy(() => import("pages/Home/Home"));
@@ -81,7 +81,7 @@ const Routes: React.FC = () => {
               }
             />
 
-            <Route element={<CheckAuth />}>
+            <Route element={<CheckUserAuth />}>
               <Route
                 path="/dashboard"
                 element={
