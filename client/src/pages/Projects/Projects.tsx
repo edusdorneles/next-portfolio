@@ -1,25 +1,12 @@
 import TitleDesc from "components/TitleDesc/TitleDesc";
 import ProjetoCard from "components/ProjectCard/ProjectCard";
+import projects from "services/projects.json";
 
 // Styles
 import { ProjectsStyle } from "./styles";
 import { Container } from "styles/Global";
 
-// Intercaces
-interface Project {
-  id: number;
-  title: string;
-  dataInicio: string;
-  image: string;
-  desc: string;
-  differential: string;
-  linkGithub: string;
-  linkPreview: string;
-}
-
 const Projects: React.FC = () => {
-  const projects = require("services/projects.json");
-
   return (
     <ProjectsStyle>
       <Container className="projects__container">
@@ -35,7 +22,7 @@ const Projects: React.FC = () => {
               key={project.id}
               id={project.id}
               title={project.title}
-              dataInicio={project.dataInicio}
+              initialDate={project.initialDate}
               image={project.image}
               desc={project.desc}
               differential={project.differential}

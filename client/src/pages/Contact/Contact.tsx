@@ -24,11 +24,11 @@ const Contact: React.FC = () => {
   // Função para envio de email
   const sendEmail = async () => {
     if (nome && celular) {
-      const serviceId: string = process.env
-        .REACT_APP_EMAIL_JS_SERVICE_ID as string;
-      const templateId: string = process.env
-        .REACT_APP_EMAIL_JS_TEMPLATE_ID as string;
-      const userId: string = process.env.REACT_APP_EMAIL_JS_USER_ID as string;
+      const serviceId: string = import.meta.env
+        .VITE_EMAIL_JS_SERVICE_ID as string;
+      const templateId: string = import.meta.env
+        .VITE_EMAIL_JS_TEMPLATE_ID as string;
+      const userId: string = import.meta.env.VITE_EMAIL_JS_USER_ID as string;
 
       const params = {
         nome: nome,

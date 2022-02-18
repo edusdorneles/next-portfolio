@@ -5,24 +5,12 @@ import { ProjectCardStyle } from "./styles";
 import { FaGithub } from "react-icons/fa";
 import { VscGlobe } from "react-icons/vsc";
 
-// Interfaces
-interface Props {
-  id: number;
-  title: string;
-  dataInicio: string;
-  image: string;
-  desc: string;
-  differential: string;
-  linkGithub: string;
-  linkPreview: string;
-}
-
-const ProjectCard: React.FC<Props> = (props) => {
+const ProjectCard: React.FC<Project> = (props) => {
   return (
     <ProjectCardStyle>
       <div className="project-card__text">
         <h2 className="project-card__text__title">{props.title}</h2>
-        <p className="project-card__text__data-inicio">{props.dataInicio}</p>
+        <p className="project-card__text__data-inicio">{props.initialDate}</p>
       </div>
 
       <div className="project-card__image">

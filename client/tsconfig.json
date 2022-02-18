@@ -16,7 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "typeRoots": ["src/@types"]
+    "typeRoots": ["src/@types"],
+    "types": ["vite/client"]
   },
   "files": ["src/styles/Styled.d.ts"],
   "include": ["src"]
