@@ -26,7 +26,6 @@ const Dashboard = React.lazy(() => import("pages/Dashboard/Dashboard"));
 const DashProjects = React.lazy(
   () => import("pages/Dashboard/Projects/Projects")
 );
-const DashUsers = React.lazy(() => import("pages/Dashboard/Users/Users"));
 
 const Routes: React.FC = () => {
   return (
@@ -96,15 +95,6 @@ const Routes: React.FC = () => {
                 element={
                   <React.Suspense fallback={<Loading />}>
                     <DashProjects />
-                  </React.Suspense>
-                }
-              />
-
-              <Route
-                path="/dashboard/users"
-                element={
-                  <React.Suspense fallback={<Loading />}>
-                    <DashUsers />
                   </React.Suspense>
                 }
               />

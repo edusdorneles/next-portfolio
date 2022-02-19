@@ -7,4 +7,5 @@ interface Project {
   differential: string;
   linkGithub: string;
   linkPreview: string;
+  editable?: boolean;
 }

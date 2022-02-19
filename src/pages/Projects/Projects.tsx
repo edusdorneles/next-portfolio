@@ -1,5 +1,5 @@
 import TitleDesc from "components/TitleDesc/TitleDesc";
-import ProjetoCard from "components/ProjectCard/ProjectCard";
+import ProjectCard from "components/ProjectCard/ProjectCard";
 import projects from "services/projects.json";
 
 // Styles
@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
 
         <div className="projects-card__container">
           {projects.map((project: Project) => (
-            <ProjetoCard
+            <ProjectCard
               key={project.id}
               id={project.id}
               title={project.title}
@@ -28,6 +28,7 @@ const Projects: React.FC = () => {
               differential={project.differential}
               linkGithub={project.linkGithub}
               linkPreview={project.linkPreview}
+              editable={false}
             />
           ))}
         </div>

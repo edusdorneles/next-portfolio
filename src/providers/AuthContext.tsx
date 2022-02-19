@@ -45,6 +45,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   const signIn = async (email: string, password: string) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      setError(null);
       navigate("/dashboard");
     } catch (err: any) {
       setError(err.message);

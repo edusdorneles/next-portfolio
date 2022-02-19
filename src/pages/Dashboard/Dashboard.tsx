@@ -8,7 +8,7 @@ import { Container } from "styles/Global";
 
 // Icos
 import { FaPencilRuler } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
+import { BsFillClockFill } from "react-icons/bs";
 
 const Dashboard: React.FC = () => {
   const { signOut } = useAuthContext();
@@ -33,13 +33,13 @@ const Dashboard: React.FC = () => {
             </div>
           </Link>
 
-          <Link className="dashboard__area" to="/dashboard/users">
+          <Link className="dashboard__area" to="/dashboard">
             <div className="area__ico">
-              <FaUser />
+              <BsFillClockFill />
             </div>
 
             <div className="area__name">
-              <p>Usuários</p>
+              <p>Em breve</p>
             </div>
           </Link>
         </div>

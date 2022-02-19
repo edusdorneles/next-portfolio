@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { shade } from "polished";
 
 export const ProjectCardStyle = styled.div`
   height: 100%;
@@ -14,7 +15,7 @@ export const ProjectCardStyle = styled.div`
       margin-bottom: 3px;
     }
 
-    .project-card__text__data-inicio {
+    .project-card__text__initial-date {
       font-size: ${(props) => props.theme.fontSize.small};
     }
 
@@ -37,27 +38,68 @@ export const ProjectCardStyle = styled.div`
   }
 
   .project-card__link-buttons {
-    padding: 0px 15px 15px 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px 15px 15px;
 
-    .link-buttons__link {
-      background-color: transparent;
-      margin-right: 5px;
-      border-radius: 100px;
-      transition: ${(props) => props.theme.transition};
+    .link-buttons__preview {
+      display: flex;
 
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+      .link-buttons__preview__link {
+        background-color: transparent;
+        margin-right: 5px;
+        border-radius: 100px;
+        transition: ${(props) => props.theme.transition};
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        a {
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: ${(props) => props.theme.fontSize.large};
+          color: white;
+        }
       }
+    }
 
-      a {
-        padding: 5px;
+    .link-buttons__preview__edit {
+      display: flex;
+
+      button {
+        background-color: ${(props) => props.theme.colors.secondary};
+        transition: ${(props) => props.theme.transition};
+        border: none;
+        border-radius: 5px;
+        width: 26px;
+        height: 26px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: ${(props) => props.theme.fontSize.large};
-        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: ${(props) =>
+            shade(0.3, props.theme.colors.secondary)};
+        }
+
+        &:last-child {
+          margin-left: 8px;
+          background-color: #ff0000;
+
+          &:hover {
+            background-color: ${shade(0.5, "#FF0000")};
+          }
+        }
+
+        svg {
+          color: white;
+          display: flex;
+        }
       }
     }
   }
