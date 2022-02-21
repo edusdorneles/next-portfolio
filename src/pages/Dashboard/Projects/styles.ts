@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { shade } from "polished";
 
 export const ProjectsStyle = styled.main`
   .projects__project-card {

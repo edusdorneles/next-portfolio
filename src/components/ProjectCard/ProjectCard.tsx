@@ -20,15 +20,15 @@ const ProjectCard: React.FC<Project> = (props) => {
       </div>
 
       <div className="project-card__text">
-        <p className="project-card__text__desc">{props.desc}</p>
-        <p className="project-card__text__differential">{props.differential}</p>
+        <p className="project-card__text__desc">{props.description}</p>
+        <p className="project-card__text__differential">{props.techs}</p>
       </div>
 
       <div className="project-card__link-buttons">
         <div className="link-buttons__preview">
           <div className="link-buttons__preview__link">
             <a
-              href={props.linkGithub}
+              href={props.github}
               aria-label="GitHub"
               target="_blank"
               rel="noreferrer"
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<Project> = (props) => {
 
           <div className="link-buttons__preview__link">
             <a
-              href={props.linkPreview}
+              href={props.preview}
               aria-label="Site"
               target="_blank"
               rel="noreferrer"
