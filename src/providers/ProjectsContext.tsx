@@ -1,13 +1,16 @@
 import { useState, createContext, useContext, SetStateAction } from "react";
 
 // Firebase
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { db } from "Firebase";
 
 // Types
 type ContextValue = {
   error: string;
   setError: React.Dispatch<SetStateAction<string>>;
+  projects: Project[];
+  setProjects: React.Dispatch<SetStateAction<Project[]>>;
+  fetchProjects: () => void;
   createProject: ({
     title,
     initialDate,
@@ -22,6 +25,9 @@ type ContextValue = {
 const DefaultValues = {
   error: "",
   setError: () => {},
+  projects: [],
+  setProjects: () => {},
+  fetchProjects: () => {},
   createProject: () => {},
 };
 
@@ -29,6 +35,13 @@ export const ProjectsContext = createContext<ContextValue>(DefaultValues);
 
 export const ProjectsContextProvider: React.FC = ({ children }) => {
   const [error, setError] = useState("");
+  const [projects, setProjects] = useState<Project[] | any>([]);
+
+  const fetchProjects = () => {
+    onSnapshot(collection(db, "projects"), (document) => {
+      setProjects(document.docs.map((doc) => doc.data()));
+    });
+  };
 
   const createProject = async (project: Project) => {
     const { title, initialDate, image, description, techs, github, preview } =
@@ -62,7 +75,16 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
   };
 
   return (
-    <ProjectsContext.Provider value={{ error, setError, createProject }}>
+    <ProjectsContext.Provider
+      value={{
+        error,
+        setError,
+        projects,
+        setProjects,
+        fetchProjects,
+        createProject,
+      }}
+    >
       {children}
     </ProjectsContext.Provider>
   );

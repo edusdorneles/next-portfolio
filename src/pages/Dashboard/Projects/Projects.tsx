@@ -11,14 +11,10 @@ import { Container } from "styles/Global";
 // Icons
 import { HiPlus } from "react-icons/hi";
 
-// Firebase
-import { db } from "Firebase";
-import { collection, onSnapshot } from "firebase/firestore";
-
 const Projects: React.FC = () => {
-  const { error, createProject } = useProjectsContext();
+  const { error, projects, fetchProjects, createProject } =
+    useProjectsContext();
   const [modalActive, setModalActive] = useState(false);
-  const [projects, setProjects] = useState<Project[] | any>([]);
 
   // Project states
   const [title, setTitle] = useState("");
@@ -29,13 +25,7 @@ const Projects: React.FC = () => {
   const [github, setGithub] = useState("");
   const [preview, setPreview] = useState("");
 
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "projects"), (document) => {
-        setProjects(document.docs.map((doc) => doc.data()));
-      }),
-    []
-  );
+  useEffect(() => fetchProjects(), [fetchProjects]);
 
   return (
     <ProjectsStyle>
