@@ -12,18 +12,23 @@ import { Container } from "styles/Global";
 import { HiPlus } from "react-icons/hi";
 
 const Projects: React.FC = () => {
-  const { error, projects, fetchProjects, createProject } =
-    useProjectsContext();
-  const [modalActive, setModalActive] = useState(false);
+  const {
+    error,
+    projects,
+    setModalActive,
+    modalActive,
+    fetchProjects,
+    createProject,
+  } = useProjectsContext();
 
   // Project states
   const [title, setTitle] = useState("");
   const [initialDate, setInitialDate] = useState("");
-  const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [techs, setTechs] = useState("");
   const [github, setGithub] = useState("");
   const [preview, setPreview] = useState("");
+  const [image, setImage] = useState<any>([]);
 
   useEffect(() => fetchProjects(), [fetchProjects]);
 
@@ -127,10 +132,8 @@ const Projects: React.FC = () => {
         <input
           id="image"
           type="file"
-          placeholder="Imagem"
-          value={image}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            setImage(e.target.value);
+            setImage(e.currentTarget.files);
           }}
         />
 

@@ -2,7 +2,7 @@ interface Project {
   id?: number;
   title: string;
   initialDate: string;
-  image: string;
+  image: Array;
   description: string;
   techs: string;
   github: string;

@@ -1,24 +1,16 @@
 import { useState, useEffect } from "react";
 import TitleDesc from "components/TitleDesc/TitleDesc";
 import ProjectCard from "components/ProjectCard/ProjectCard";
+import { useProjectsContext } from "providers/ProjectsContext";
 
 // Styles
 import { ProjectsStyle } from "./styles";
 import { Container } from "styles/Global";
 
-import { db } from "Firebase";
-import { collection, onSnapshot } from "firebase/firestore";
-
 const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[] | any>([]);
+  const { projects, fetchProjects } = useProjectsContext();
 
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "projects"), (document) => {
-        setProjects(document.docs.map((doc) => doc.data()));
-      }),
-    []
-  );
+  useEffect(() => fetchProjects(), [fetchProjects]);
 
   return (
     <ProjectsStyle>
@@ -41,7 +33,6 @@ const Projects: React.FC = () => {
               techs={project.techs}
               github={project.github}
               preview={project.preview}
-              editable={true}
             />
           ))}
         </div>
