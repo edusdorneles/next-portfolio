@@ -10,7 +10,7 @@ import { Container } from "styles/Global";
 const Projects: React.FC = () => {
   const { projects, fetchProjects } = useProjectsContext();
 
-  useEffect(() => fetchProjects(), [fetchProjects]);
+  useEffect(() => fetchProjects(), []);
 
   return (
     <ProjectsStyle>

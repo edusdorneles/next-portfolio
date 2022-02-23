@@ -30,7 +30,27 @@ const Projects: React.FC = () => {
   const [preview, setPreview] = useState("");
   const [image, setImage] = useState<any>([]);
 
-  useEffect(() => fetchProjects(), [fetchProjects]);
+  const cleanInput = () => {
+    if (
+      title ||
+      initialDate ||
+      image ||
+      description ||
+      techs ||
+      github ||
+      preview
+    ) {
+      setTitle("");
+      setInitialDate("");
+      setDescription("");
+      setTechs("");
+      setGithub("");
+      setPreview("");
+      setImage([]);
+    }
+  }
+
+  useEffect(() => fetchProjects(), []);
 
   return (
     <ProjectsStyle>
@@ -127,7 +147,7 @@ const Projects: React.FC = () => {
           }}
         />
 
-        <label htmlFor="image">Clique aqui e selecione uma imagem:</label>
+        <label htmlFor="image">{image[0] ? `Image: ${image[0].name}` : "Clique aqui e selecione uma imagem:"}</label>
 
         <input
           id="image"
@@ -149,6 +169,7 @@ const Projects: React.FC = () => {
               github,
               preview,
             });
+            cleanInput();
           }}
         >
           Criar

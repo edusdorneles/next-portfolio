@@ -6,7 +6,7 @@ import React, {
 } from "react";
 
 // Firebase
-import { addDoc, collection, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, doc, onSnapshot } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "Firebase";
 
@@ -50,7 +50,7 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
 
   const fetchProjects = () => {
     onSnapshot(collection(db, "projects"), (document) => {
-      setProjects(document.docs.map((doc) => doc.data()));
+      setProjects(document.docs.map((doc) => ({id: doc.id, ...doc.data()})));
     });
   };
 
@@ -87,7 +87,7 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
         title: title,
         initialDate: initialDate,
         image: projectImageUrl,
-        descrition: description,
+        description: description,
         techs: techs,
         github: github,
         preview: preview,
