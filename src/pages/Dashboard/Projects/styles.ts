@@ -30,14 +30,14 @@ export const ProjectsStyle = styled.main`
 
   /* Adaptação para mobile */
   @media (max-width: 992px) {
-    .projects-card__container {
+    .projects__project-card {
       grid-template-columns: 1fr 1fr;
       grid-gap: 15px;
     }
   }
 
   @media (max-width: 768px) {
-    .projects-card__container {
+    .projects__project-card {
       grid-template-columns: 1fr;
       grid-gap: 10px;
     }
