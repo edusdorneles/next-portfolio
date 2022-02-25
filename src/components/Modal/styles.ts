@@ -39,6 +39,10 @@ export const ModalStyle = styled.div`
       grid-gap: 15px;
       padding-top: 10px;
 
+      p {
+        text-align: center;
+      }
+
       input {
         color: ${(props) => props.theme.colors.text};
         font-size: ${(props) => props.theme.fontSize.medium};

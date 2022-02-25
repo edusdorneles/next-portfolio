@@ -1,5 +1,5 @@
 interface Project {
-  id?: string;
+  id?: any;
   title: string;
   initialDate: string;
   image: Array;

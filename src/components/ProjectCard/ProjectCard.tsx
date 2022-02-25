@@ -1,3 +1,7 @@
+import { useState } from "react";
+import Modal from "components/Modal/Modal";
+import { useProjectsContext } from "providers/ProjectsContext";
+
 // Styles
 import { ProjectCardStyle } from "./styles";
 
@@ -5,9 +9,11 @@ import { ProjectCardStyle } from "./styles";
 import { FaGithub } from "react-icons/fa";
 import { VscGlobe } from "react-icons/vsc";
 import { IoClose } from "react-icons/io5";
-import { HiPencil } from "react-icons/hi";
 
-const ProjectCard: React.FC<Project> = (props) => {
+const ProjectCard: React.FC<Project> = (props: Project) => {
+  const [activeDeleteModal, setActiveDeleteModal] = useState(false);
+  const { deleteProject } = useProjectsContext();
+
   return (
     <ProjectCardStyle>
       <div className="project-card__text">
@@ -51,16 +57,32 @@ const ProjectCard: React.FC<Project> = (props) => {
 
         {props.editable && (
           <div className="link-buttons__preview__edit">
-            <button>
-              <HiPencil />
-            </button>
-
-            <button>
+            <button
+              onClick={() => {
+                setActiveDeleteModal(true);
+              }}
+            >
               <IoClose />
             </button>
           </div>
         )}
       </div>
+
+      <Modal
+        title="Deletar projeto"
+        modalActive={activeDeleteModal}
+        setModalActive={setActiveDeleteModal}
+      >
+        <p>Você tem certeza q deseja deletar este projeto?</p>
+
+        <button
+          onClick={() => {
+            deleteProject(props.id);
+          }}
+        >
+          Deletar
+        </button>
+      </Modal>
     </ProjectCardStyle>
   );
 };

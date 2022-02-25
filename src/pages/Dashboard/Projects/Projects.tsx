@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
       setPreview("");
       setImage([]);
     }
-  }
+  };
 
   useEffect(() => fetchProjects(), []);
 
@@ -147,7 +147,11 @@ const Projects: React.FC = () => {
           }}
         />
 
-        <label htmlFor="image">{image[0] ? `Image: ${image[0].name}` : "Clique aqui e selecione uma imagem:"}</label>
+        <label htmlFor="image">
+          {image[0]
+            ? "Imagem inserida!"
+            : "Clique aqui e selecione uma imagem:"}
+        </label>
 
         <input
           id="image"

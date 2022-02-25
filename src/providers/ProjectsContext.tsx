@@ -6,7 +6,15 @@ import React, {
 } from "react";
 
 // Firebase
-import { addDoc, collection, doc, onSnapshot } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  onSnapshot,
+  deleteDoc,
+  doc,
+  query,
+  orderBy,
+} from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "Firebase";
 
@@ -28,6 +36,7 @@ type ContextValue = {
     github,
     preview,
   }: Project) => void;
+  deleteProject: (id: string) => void;
 };
 
 const DefaultValues = {
@@ -39,6 +48,7 @@ const DefaultValues = {
   setProjects: () => {},
   fetchProjects: () => {},
   createProject: () => {},
+  deleteProject: () => {},
 };
 
 export const ProjectsContext = createContext<ContextValue>(DefaultValues);
@@ -49,30 +59,32 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
   const [projects, setProjects] = useState<Project[] | any>([]);
 
   const fetchProjects = () => {
-    onSnapshot(collection(db, "projects"), (document) => {
-      setProjects(document.docs.map((doc) => ({id: doc.id, ...doc.data()})));
+    const projectsQuery = query(
+      collection(db, "projects"),
+      orderBy("createdAt", "asc")
+    );
+
+    onSnapshot(projectsQuery, (document) => {
+      setProjects(document.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   };
 
   const createProject = async (project: Project) => {
-    const { title, initialDate, image, description, techs, github, preview } =
-      project;
-
     if (
-      !title ||
-      !initialDate ||
-      !image ||
-      !description ||
-      !techs ||
-      !github ||
-      !preview
+      !project.title ||
+      !project.initialDate ||
+      !project.image ||
+      !project.description ||
+      !project.techs ||
+      !project.github ||
+      !project.preview
     ) {
       setError("Preencha todos os campos.");
     } else {
       setError("");
 
       // Adicionar ao Storage
-      const projectImage = image[0];
+      const projectImage = project.image[0];
 
       const projectImageRef = ref(
         storage,
@@ -84,17 +96,22 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
 
       // Adicionar ao Firestore
       await addDoc(collection(db, "projects"), {
-        title: title,
-        initialDate: initialDate,
+        title: project.title,
+        initialDate: project.initialDate,
         image: projectImageUrl,
-        description: description,
-        techs: techs,
-        github: github,
-        preview: preview,
+        description: project.description,
+        techs: project.techs,
+        github: project.github,
+        preview: project.preview,
+        createdAt: new Date(),
       });
 
       setModalActive(false);
     }
+  };
+
+  const deleteProject = async (id: string) => {
+    await deleteDoc(doc(db, "projects", id));
   };
 
   return (
@@ -108,6 +125,7 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
         setProjects,
         fetchProjects,
         createProject,
+        deleteProject,
       }}
     >
       {children}
