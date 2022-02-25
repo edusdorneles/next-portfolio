@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { shade } from "polished";
 
 export const ProjectCardStyle = styled.div`
-  height: 100%;
+  height: 387px;
   background-color: ${(props) => props.theme.colors.primary};
   border-radius: 5px;
   border: 1px solid #252525;

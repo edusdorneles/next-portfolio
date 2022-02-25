@@ -1,11 +1,11 @@
 interface Project {
-  id: number;
+  id?: any;
   title: string;
   initialDate: string;
-  image: string;
-  desc: string;
-  differential: string;
-  linkGithub: string;
-  linkPreview: string;
+  image: Array;
+  description: string;
+  techs: string;
+  github: string;
+  preview: string;
   editable?: boolean;
 }

@@ -9,7 +9,7 @@ export const ProjectsStyle = styled.main`
     .projects_projects-card--new {
       transition: ${(props) => props.theme.transition};
       width: 100%;
-      height: 373px;
+      height: 387px;
       border-radius: 5px;
       border: 2px dashed ${(props) => props.theme.colors.secondary};
       display: flex;
