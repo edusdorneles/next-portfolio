@@ -4,7 +4,7 @@ import Routes from "routes/Routes";
 import { ThemeProvider } from "styled-components";
 import { DefaultTheme } from "styles/Themes";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <Routes />
