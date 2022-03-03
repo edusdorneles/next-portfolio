@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import TitleDesc from "components/TitleDesc/TitleDesc";
-import Input from "react-phone-number-input/input";
+import PhoneInput from "react-phone-number-input/input";
 import emailjs from "emailjs-com";
 
 // Toast envio do email
@@ -115,12 +115,12 @@ const Contact: React.FC = () => {
               }
             />
 
-            <Input
+            <PhoneInput
               placeholder="Celular: *"
               defaultCountry="BR"
               value={celular}
               onChange={(e: any) => {
-                setCelular(e.target.value);
+                setCelular(e);
               }}
             />
 
