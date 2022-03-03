@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
     setModalActive,
     modalActive,
     fetchProjects,
-    createProject,
+    createProject
   } = useProjectsContext();
 
   // Project states
@@ -171,7 +171,7 @@ const Projects: React.FC = () => {
               description,
               techs,
               github,
-              preview,
+              preview
             });
             cleanInput();
           }}

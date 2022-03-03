@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
         nome: nome,
         telefone: celular,
         email: email,
-        mensagem: mensagem,
+        mensagem: mensagem
       };
 
       await toast.promise(
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
         {
           pending: "Enviando email, aguarde!",
           success: "Email enviado!",
-          error: "Erro no envio!",
+          error: "Erro no envio!"
         }
       );
 

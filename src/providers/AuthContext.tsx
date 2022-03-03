@@ -3,7 +3,7 @@ import {
   useEffect,
   createContext,
   useContext,
-  SetStateAction,
+  SetStateAction
 } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut as logout,
-  User,
+  User
 } from "firebase/auth";
 import { auth } from "Firebase";
 
@@ -32,7 +32,7 @@ const DefaultValues = {
   error: null,
   setError: () => {},
   signIn: () => {},
-  signOut: () => {},
+  signOut: () => {}
 };
 
 export const AuthContext = createContext<ContextValue>(DefaultValues);

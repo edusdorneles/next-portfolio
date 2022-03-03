@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   server: { port: 3001 },
   root: "./",
-  publicDir: "./public",
+  publicDir: "./public"
 });

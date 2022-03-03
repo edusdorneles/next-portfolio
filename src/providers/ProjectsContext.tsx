@@ -2,7 +2,7 @@ import React, {
   useState,
   createContext,
   useContext,
-  SetStateAction,
+  SetStateAction
 } from "react";
 
 // Firebase
@@ -13,7 +13,7 @@ import {
   deleteDoc,
   doc,
   query,
-  orderBy,
+  orderBy
 } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "Firebase";
@@ -34,7 +34,7 @@ type ContextValue = {
     description,
     techs,
     github,
-    preview,
+    preview
   }: Project) => void;
   deleteProject: (id: string) => void;
 };
@@ -48,7 +48,7 @@ const DefaultValues = {
   setProjects: () => {},
   fetchProjects: () => {},
   createProject: () => {},
-  deleteProject: () => {},
+  deleteProject: () => {}
 };
 
 export const ProjectsContext = createContext<ContextValue>(DefaultValues);
@@ -103,7 +103,7 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
         techs: project.techs,
         github: project.github,
         preview: project.preview,
-        createdAt: new Date(),
+        createdAt: new Date()
       });
 
       setModalActive(false);
@@ -125,7 +125,7 @@ export const ProjectsContextProvider: React.FC = ({ children }) => {
         setProjects,
         fetchProjects,
         createProject,
-        deleteProject,
+        deleteProject
       }}
     >
       {children}

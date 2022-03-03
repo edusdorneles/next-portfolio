@@ -16,7 +16,7 @@ const Modal: React.FC<Props> = ({
   title,
   children,
   modalActive,
-  setModalActive,
+  setModalActive
 }) => {
   return (
     <ModalStyle className={modalActive ? "modal__enabled" : ""}>

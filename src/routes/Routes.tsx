@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Routes as Switch,
   Route,
-  Navigate,
+  Navigate
 } from "react-router-dom";
 import Layout from "components/Layout";
 import Loading from "components/Loading/Loading";
