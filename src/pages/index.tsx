@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Layout } from "components";
 
 const Home: NextPage = () => {
     return (
-        <div>
+        <main>
             <Head>
                 <title>Eduardo Dorneles - Portfólio</title>
                 <meta
@@ -13,8 +14,8 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div>Home</div>
-        </div>
+            <p>Home!</p>
+        </main>
     );
 };
 
