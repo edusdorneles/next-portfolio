@@ -27,7 +27,7 @@ export const NavItem = ({ href, icon, text }: Props) => {
     return (
         <Link href={href}>
             <a
-                className={`text-white text-md px-2 h-7 ml-2 flex justify-center items-center bg-cyan-800 rounded-lg transition-all ${
+                className={`text-white text-md px-2 h-7 ml-2 flex justify-center items-center rounded-lg transition-all ${
                     active && "bg-secondary hover:bg-secondaryDark"
                 }`}
             >
