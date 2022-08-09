@@ -1,8 +1,9 @@
 import Head from "next/head";
+import { Contact as ContactTemplate } from "components/templates/Contact";
 
 const Contato = () => {
     return (
-        <>
+        <main>
             <Head>
                 <title>Eduardo Dorneles - Contato</title>
                 <meta
@@ -12,8 +13,8 @@ const Contato = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div>Contato!</div>
-        </>
+            <ContactTemplate />
+        </main>
     );
 };
 
