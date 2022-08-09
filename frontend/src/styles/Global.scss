@@ -19,6 +19,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+#__next {
+    min-height: 100vh;
+}
+
 body {
     font-family: "Josefin Sans", sans-serif;
     background-color: var(--tertiary-color);

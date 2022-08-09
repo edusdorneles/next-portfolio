@@ -1,4 +1,4 @@
-import { Header } from "components/organisms";
+import { Header, Footer } from "components/organisms";
 
 type Props = {
     children: React.ReactNode;
@@ -9,6 +9,7 @@ export const Layout = ({ children }: Props) => {
         <>
             <Header />
             {children}
+            <Footer />
         </>
     );
 };
