@@ -5,3 +5,4 @@ export * from "./PageTitle";
 export * from "./RoundedIcon";
 export * from "./Button";
 export * from "./Input";
+export * from "./Text";
