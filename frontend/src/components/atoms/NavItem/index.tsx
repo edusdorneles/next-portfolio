@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -25,7 +25,7 @@ export const NavItem = ({ href, icon, text }: Props) => {
     }, [router.pathname]);
 
     return (
-        <Link href={href}>
+        <Link href={href} passHref>
             <a
                 className={`text-white text-md px-2 h-7 ml-2 flex justify-center items-center rounded-lg transition-all ${
                     active && "bg-secondary hover:bg-secondaryDark"

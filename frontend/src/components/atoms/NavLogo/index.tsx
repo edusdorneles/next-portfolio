@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const NavLogo = () => {
     return (
         <Link href="/">
-            <a>
-                <img className="h-9" src="/images/logo.png" />
+            <a className="h-full flex items-center">
+                <Image src="/images/logo.png" width={30} height={35} />
             </a>
         </Link>
     );

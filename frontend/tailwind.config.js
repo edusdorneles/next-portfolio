@@ -12,6 +12,7 @@ module.exports = {
             tertiaryDark: "#0a0a12",
             gray: "#252525",
             black: "#000000",
+            red: "#ff0000",
             white: {
                 DEFAULT: "#ffffff",
                 100: "#f5f5f5",
