@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #14141c;
+    --primary-color-dark: #0a0a12;
+    --secondary-color: #0e79b2;
+    --secondary-color-dark: #09547c;
+    --tertiary-color: #191923;
+    --tertiary-color-dark: #0a0a12;
+    --transition: all 0.3s ease-in-out;
+    --border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#__next {
+    min-height: 100vh;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: var(--tertiary-color);
+}

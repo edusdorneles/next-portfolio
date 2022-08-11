@@ -1,71 +1,35 @@
 {
-  "name": "react-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-phone-number-input": "^3.0.13",
-    "@types/react-router-dom": "^5.3.2",
-    "@types/styled-components": "^5.1.15",
-    "axios": "^0.25.0",
-    "emailjs-com": "^3.2.0",
-    "firebase": "^9.6.7",
-    "polished": "^4.1.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-phone-number-input": "^3.1.41",
-    "react-router-dom": "^6.0.2",
-    "react-scripts": "4.0.3",
-    "react-spinners": "^0.11.0",
-    "react-toastify": "^8.1.0",
-    "styled-components": "^5.3.3",
-    "typescript": "^4.1.2",
-    "vite-tsconfig-paths": "^3.4.0",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "dev": "vite --open",
-    "build": "vite build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "@vitejs/plugin-react": "^1.2.0",
-    "eslint": "^8.10.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^2.5.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.2",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.5.1",
-    "vite": "^2.8.3"
-  }
+    "name": "react-portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^2.9.7",
+        "@types/styled-components": "^5.1.25",
+        "next": "12.2.4",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-hook-form": "^7.34.0",
+        "react-icons": "^4.4.0",
+        "react-toastify": "^9.0.8",
+        "sass": "^1.54.3",
+        "styled-components": "^5.3.5",
+        "yup": "^0.32.11"
+    },
+    "devDependencies": {
+        "@types/node": "18.6.4",
+        "@types/react": "18.0.16",
+        "@types/react-dom": "18.0.6",
+        "autoprefixer": "^10.4.8",
+        "eslint": "8.21.0",
+        "eslint-config-next": "12.2.4",
+        "postcss": "^8.4.16",
+        "tailwindcss": "^3.1.8",
+        "typescript": "4.7.4"
+    }
 }

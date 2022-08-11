@@ -1,11 +1,10 @@
 interface Project {
-  id?: any;
-  title: string;
-  initialDate: string;
-  image: Array;
-  description: string;
-  techs: string;
-  github: string;
-  preview: string;
-  editable?: boolean;
+    id: string;
+    title: string;
+    createdAt: string;
+    image: string;
+    description: string;
+    techs: string[];
+    github: string;
+    website?: string;
 }
