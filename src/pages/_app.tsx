@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
-import { Layout } from "components";
+import { Layout } from "components/templates";
 import "styles/Global.scss";
 import "react-toastify/dist/ReactToastify.css";
 

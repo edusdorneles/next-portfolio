@@ -17,7 +17,9 @@ module.exports = {
                 DEFAULT: "#ffffff",
                 100: "#f5f5f5",
                 200: "#e6e6e6",
-                500: "#cccccc"
+                300: "#d9d9d9",
+                500: "#cccccc",
+                600: "rgba(204, 204, 204, 0.2)"
             }
         },
         container: {

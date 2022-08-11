@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Home as HomeTemplate } from "components";
+import { Home as HomeTemplate } from "components/templates";
 
 const Home: NextPage = () => {
     return (
