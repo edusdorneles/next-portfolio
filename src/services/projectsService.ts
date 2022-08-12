@@ -28,5 +28,34 @@ export const projects: Project[] = [
         techs: ["React", "TypeScript", "Redux Toolkit"],
         github: "https://github.com/dududornelees/redux-to-do-list",
         website: "https://redux-to-do-list-dududornelees.netlify.app"
+    },
+    {
+        id: "662292cc-ecfd-4920-9ef3-5894a56b73c0",
+        title: "LOL - Champions",
+        createdAt: "Fevereiro de 2022",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1660264603/lol-champions_jmshxr.png",
+        description: "Aplicação para demonstrar meus conhecimentos no consumo de APIs, neste caso, do League of Legends.",
+        techs: ["React", "TypeScript", "Styled-Components"],
+        github: "https://github.com/dududornelees/league-of-legends-champs",
+        website: "https://league-of-legends-champs-dududornelees.netlify.app/"
+    },
+    {
+        id: "025794ba-d22e-4fce-a525-8faeba8c8671",
+        title: "Qual o Número?",
+        createdAt: "Outubro de 2022",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1660264997/qual-o-numero_lwkqi8.png",
+        description: "Um jogo de adivinhação de número, desenvolvido com React, TypeScript e Styled-Components.",
+        techs: ["React", "TypeScript", "Styled-Components"],
+        github: "https://github.com/dududornelees/qual-o-numero",
+        website: "https://qual-o-numero-dududornelees.netlify.app/"
+    },
+    {
+        id: "e5f10568-76aa-4124-9233-557b2d27e9c1",
+        title: "Lifecare - Calculadora IMC",
+        createdAt: "Fevereiro de 2022",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1660263438/lifecare_z2wtuf.png",
+        description: "Meu primeiro aplicativo desenvolvido, uma calculadora de IMC, desenvolvida com React Native e TypeScript.",
+        techs: ["React Navite", "TypeScript"],
+        github: "https://github.com/dududornelees/calculadora-imc",
     }
 ];
