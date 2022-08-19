@@ -1,10 +1,4 @@
-import React from "react";
-
-type Props = {
-    icon: React.ReactNode;
-    href: string;
-    title: string;
-};
+import { Props } from "./types";
 
 export const RoundedIcon = ({ icon, href, title }: Props) => {
     return (

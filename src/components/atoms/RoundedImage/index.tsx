@@ -1,13 +1,5 @@
 import Image from "next/image";
-
-type Props = {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    layout?: "fixed" | "fill" | "intrinsic" | "responsive";
-    className?: string;
-};
+import { Props } from "./types";
 
 export const RoundedImage = ({ src, alt, width, height, layout, className }: Props) => {
     return (
