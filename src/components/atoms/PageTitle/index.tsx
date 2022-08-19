@@ -1,7 +1,4 @@
-type Props = {
-    title: string;
-    className?: string;
-};
+import { Props } from "./types";
 
 export const PageTitle = ({ title, className }: Props) => {
     return (

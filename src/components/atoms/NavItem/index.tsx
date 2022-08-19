@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-type Props = {
-    href: string;
-    icon: React.ReactNode;
-    text: string;
-};
+import { Props } from "./types";
 
 export const NavItem = ({ href, icon, text }: Props) => {
     const router = useRouter();
     const [active, setActive] = useState(false);
 
     const checkIsActive = () => {
-        if (router.pathname === href) {
-            setActive(true);
-        } else {
-            setActive(false);
-        }
+        router.pathname === href ? setActive(true) : setActive(false);
     };
 
     useEffect(() => {
