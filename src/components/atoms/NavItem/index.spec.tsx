@@ -9,7 +9,7 @@ jest.mock("next/router", () => ({
     }
 }));
 
-describe("NavItem component", () => {
+describe("NavItem", () => {
     it("should render text", () => {
         render(<NavItem text="text" href="/" icon={<>icon</>} />);
         const itemText = screen.getByText("text");

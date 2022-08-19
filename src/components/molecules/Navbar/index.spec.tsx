@@ -5,14 +5,14 @@ import "@testing-library/jest-dom";
 
 jest.mock("components/atoms", () => ({
     NavItem: () => {
-        return <a>Home</a>;
+        return <a href="/">Home</a>;
     }
 }));
 
-describe("Navbar component", () => {
-    it("should render navbar with three links", () => {
+describe("Navbar", () => {
+    it("should render with three links", () => {
         render(<Navbar />);
-        const navbarLinks = screen.getAllByText("Home");
-        expect(navbarLinks.length).toEqual(3);
+        const navbarLinks = screen.getAllByRole("link", { name: "Home" });
+        expect(navbarLinks.length).toBe(3);
     });
 });
