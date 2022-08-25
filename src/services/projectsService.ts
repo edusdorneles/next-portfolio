@@ -11,6 +11,16 @@ export const projects: Project[] = [
         website: "https://aquabit.com.br"
     },
     {
+        id: "",
+        title: "RG Nova Vida",
+        createdAt: "Maio de 2021",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1661455681/rg-nova-vida_lgaolr.png",
+        description: "Uma landing page, fiz tanto a parte do design da página, quanto a parte do desenvolvimento.",
+        techs: ["PHP", "HTML", "CSS", "JavaScript"],
+        github: "https://github.com/dududornelees/nova-vida",
+        website: "http://www.rgnovavida.epizy.com"
+    },
+    {
         id: "e0f0bfa3-9ad1-4037-8244-99316816d3d8",
         title: "Micro RVA",
         createdAt: "Julho de 2022",
