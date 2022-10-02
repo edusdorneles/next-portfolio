@@ -11,16 +11,6 @@ export const projects: Project[] = [
         website: "https://aquabit.com.br"
     },
     {
-        id: "",
-        title: "RG Nova Vida",
-        createdAt: "Maio de 2021",
-        image: "https://res.cloudinary.com/dududornelees/image/upload/v1661455681/rg-nova-vida_lgaolr.png",
-        description: "Uma landing page, fiz tanto a parte do design da página, quanto a parte do desenvolvimento.",
-        techs: ["PHP", "HTML", "CSS", "JavaScript"],
-        github: "https://github.com/dududornelees/nova-vida",
-        website: "http://www.rgnovavida.epizy.com"
-    },
-    {
         id: "e0f0bfa3-9ad1-4037-8244-99316816d3d8",
         title: "Micro RVA",
         createdAt: "Julho de 2022",
@@ -30,11 +20,21 @@ export const projects: Project[] = [
         github: "https://github.com/dududornelees/micro-rva"
     },
     {
+        id: "2d656fb2-b7c5-4b38-bc14-456dc50ecc87",
+        title: "Harry Potter - Auth",
+        createdAt: "Outubro de 2022",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1664737609/harry-banner_zajlhl.png",
+        description: "Projeto reforçar o conceito de autenticação, um sistema com Login e Logout, para este gerenciament, utilizei o Redux Toolkit.",
+        techs: ["React", "TypeScript", "Redux Toolkit", "Tailwind"],
+        github: "https://github.com/dududornelees/harry-potter-auth",
+        website: "https://harry-potter-auth-dududornelees.netlify.app"
+    },
+    {
         id: "2ffc53b3-55fc-40dc-b9c4-8d89cc5cd46c",
         title: "Redux - To do List",
         createdAt: "Março de 2022",
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660187436/redux-to-do-list_zazcgo.png",
-        description: "Uma lista de tarefas, feita com React, TypeScript e para fazer o gerenciamento global da aplicação, utilize Redux Toolkit.",
+        description: "Uma lista de tarefas, feita com React, TypeScript e para fazer o gerenciamento global da aplicação, utilizei o Redux Toolkit.",
         techs: ["React", "TypeScript", "Redux Toolkit"],
         github: "https://github.com/dududornelees/redux-to-do-list",
         website: "https://redux-to-do-list-dududornelees.netlify.app"
@@ -67,5 +67,15 @@ export const projects: Project[] = [
         description: "Meu primeiro aplicativo desenvolvido, uma calculadora de IMC, desenvolvida com React Native e TypeScript.",
         techs: ["React Navite", "TypeScript"],
         github: "https://github.com/dududornelees/calculadora-imc",
-    }
+    },
+    {
+        id: "e600894f-2ab6-4265-bbdd-d8d39602b7ec",
+        title: "RG Nova Vida",
+        createdAt: "Maio de 2021",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1661455681/rg-nova-vida_lgaolr.png",
+        description: "Uma landing page, fiz tanto a parte do design da página, quanto a parte do desenvolvimento.",
+        techs: ["PHP", "HTML", "CSS", "JavaScript"],
+        github: "https://github.com/dududornelees/nova-vida",
+        website: "http://www.rgnovavida.epizy.com"
+    },
 ];
