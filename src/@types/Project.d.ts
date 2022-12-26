@@ -1,10 +1,7 @@
-interface Project {
-    id: string;
-    title: string;
-    createdAt: string;
+type Project = {
     image: string;
-    description: string;
-    techs: string[];
+    title: string;
+    techs: string;
     github: string;
-    website?: string;
-}
+    site?: string;
+};
