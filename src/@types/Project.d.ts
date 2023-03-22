@@ -2,6 +2,6 @@ type Project = {
     image: string;
     title: string;
     techs: string;
-    github: string;
+    github?: string;
     site?: string;
 };

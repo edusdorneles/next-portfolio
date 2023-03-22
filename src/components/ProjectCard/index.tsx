@@ -30,14 +30,16 @@ export const ProjectCard = ({ project }: P.Props) => {
                         </a>
                     )}
 
-                    <a
-                        href={project.github}
-                        target="_blank"
-                        className="transition-all p-1 rounded-full hover:bg-secondaryHover"
-                        title="Projeto no GitHub"
-                    >
-                        <FaGithub size={16} />
-                    </a>
+                    {project.github && (
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            className="transition-all p-1 rounded-full hover:bg-secondaryHover"
+                            title="Projeto no GitHub"
+                        >
+                            <FaGithub size={16} />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

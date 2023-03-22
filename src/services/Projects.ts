@@ -3,8 +3,7 @@ export const projects: Project[] = [
         title: "Aquabit",
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660186429/aquabit_nlpylp.png",
         techs: "React, TypeScript e Styled-Components",
-        github: "https://github.com/AquabitFarm/Aquabit-Landing",
-        site: "https://aquabit.com.br"
+        site: "https://aquabit-landing-page.vercel.app/"
     },
     {
         title: "Micro RVA",
