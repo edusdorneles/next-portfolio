@@ -6,6 +6,13 @@ export const projects: Project[] = [
         site: "https://aquabit-landing-page.vercel.app/"
     },
     {
+        title: "TopFit",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1679591401/topfit_pq2ef1.png",
+        techs: "Next, TypeScript e Tailwind",
+        site: "https://topfit-landing-page.vercel.app/",
+        github: "https://github.com/dududornelees/topfit-landing-page"
+    },
+    {
         title: "Micro RVA",
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660187055/micro-rva_kyshba.png",
         techs: "React, Vue, Angular e Single-Spa",
@@ -42,7 +49,6 @@ export const projects: Project[] = [
     {
         title: "Calculadora de IMC",
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660263438/lifecare_z2wtuf.png",
-
         techs: "React Navite, TypeScript e Styled-Components",
         github: "https://github.com/dududornelees/calculadora-imc"
     },
