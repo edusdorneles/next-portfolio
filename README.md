@@ -11,15 +11,11 @@
 
 ---
 
-<a href="https://dududornelees.com.br/">
-    <img alt="Eduardo Dorneles - Portfólio" title="Eduardo Dorneles - Portfólio" src="./github/next-portfolio.gif" width="100%" />
-</a>
-
-<p align="center">Clique <a href="https://dududornelees.com.br/">aqui</a> para abrir o site da aplicação!<p>
-
 <h3 id="pre-requisitos">Pré-Requisitos</h3>
 Antes de começar, você vai precisar ter instalado em sua máquina as seguinte ferramentas: <a href="https://git-scm.com" target="_blank">Git</a>, <a href="https://nodejs.org/en/" target="_blank">Node.js</a>. <br>
 Além disto, é bom ter um editor para trabalhar com o código, como o <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>.
+
+---
 
 <h3 id="rodando-a-aplicacao">Rodando a Aplicação</h3>
 
@@ -35,12 +31,19 @@ $ yarn dev
 # O servidor iniciará na porta: 3000. Acesse http://localhost:3000/
 ```
 
+---
+
 <h3 id="tecnologias">Tecnologias</h3>
 As seguintes ferramentas foram utilizadas na construção deste projeto:
 
 -   [Next](https://nextjs.org/)
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Tailwind](https://tailwindcss.com/)
+
+---
+
+<h3><a target="_blank" href="https://www.dududornelees.com.br/">Abrir aplicação</a></h3>
+<p>Clique no link acima para abrir a aplicação no seu navegador.</p>
 
 ---
 
