@@ -1,5 +1,11 @@
 export const projects: Project[] = [
     {
+        title: "NinjaMotors",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1683556403/ninjamotors_amynwz.png",
+        techs: "Next, Strapi, TypeScript e Tailwind",
+        site: "https://ninjamotors.vercel.app/"
+    },
+    {
         title: "Aquabit",
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660186429/aquabit_nlpylp.png",
         techs: "React, TypeScript e Styled-Components",

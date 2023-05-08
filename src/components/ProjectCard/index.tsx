@@ -16,7 +16,7 @@ export const ProjectCard = ({ project }: P.Props) => {
                 />
 
                 <p className="font-semibold mb-2 text-cyan-100">{project.title}</p>
-                <p className="text-sm mb-2">Techs: {project.techs}</p>
+                <p className="text-sm mb-2">Stack: {project.techs}</p>
 
                 <div className="flex items-center gap-1">
                     {project.site && (
