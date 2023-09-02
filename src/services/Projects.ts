@@ -19,10 +19,11 @@ export const projects: Project[] = [
         github: "https://github.com/dududornelees/topfit-landing-page"
     },
     {
-        title: "Micro RVA",
-        image: "https://res.cloudinary.com/dududornelees/image/upload/v1660187055/micro-rva_kyshba.png",
-        techs: "React, Vue, Angular e Single-Spa",
-        github: "https://github.com/dududornelees/micro-rva"
+        title: "Angular Weather",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1693684555/angular-weather_qttuez.jpg",
+        techs: "Angular, TypeScript e SCSS",
+        github: "https://github.com/dududornelees/angular-weather",
+        site: "https://angular-weather-nu.vercel.app/weather"
     },
     {
         title: "Harry Potter - Auth",
@@ -51,6 +52,12 @@ export const projects: Project[] = [
         techs: "React, TypeScript e Styled-Components",
         github: "https://github.com/dududornelees/qual-o-numero",
         site: "https://qual-o-numero-dududornelees.netlify.app/"
+    },
+    {
+        title: "Micro RVA",
+        image: "https://res.cloudinary.com/dududornelees/image/upload/v1660187055/micro-rva_kyshba.png",
+        techs: "React, Vue, Angular e Single-Spa",
+        github: "https://github.com/dududornelees/micro-rva"
     },
     {
         title: "Calculadora de IMC",
