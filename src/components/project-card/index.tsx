@@ -4,7 +4,7 @@ import * as P from "./props";
 
 export const ProjectCard = ({ project }: P.Props) => {
     return (
-        <div className="flex flex-col rounded-md bg-secondary p-3 shadow-sm">
+        <div className="flex flex-col rounded-md bg-secondary p-3 shadow-sm transition-all hover:bg-secondaryHover">
             <div className="rounded-t-md">
                 <Image
                     src={project.image}
@@ -21,10 +21,10 @@ export const ProjectCard = ({ project }: P.Props) => {
                 <div className="flex items-center gap-1">
                     {project.site && (
                         <a
-                            href={project.site}
                             target="_blank"
-                            className="rounded-full p-1 transition-all hover:bg-secondaryHover"
+                            href={project.site}
                             title="Preview do projeto"
+                            className="rounded-full p-1 transition-all hover:bg-gray-700"
                         >
                             <FaGlobe size={16} />
                         </a>
@@ -32,10 +32,10 @@ export const ProjectCard = ({ project }: P.Props) => {
 
                     {project.github && (
                         <a
-                            href={project.github}
                             target="_blank"
-                            className="rounded-full p-1 transition-all hover:bg-secondaryHover"
+                            href={project.github}
                             title="Projeto no GitHub"
+                            className="rounded-full p-1 transition-all hover:bg-gray-700"
                         >
                             <FaGithub size={16} />
                         </a>

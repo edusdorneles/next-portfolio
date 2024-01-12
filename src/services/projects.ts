@@ -1,11 +1,5 @@
 export const projects: Project[] = [
     {
-        title: "NinjaMotors",
-        image: "https://res.cloudinary.com/dududornelees/image/upload/v1683556403/ninjamotors_amynwz.png",
-        techs: "Next, Strapi, TypeScript e Tailwind",
-        site: "https://ninjamotors.vercel.app/"
-    },
-    {
         title: "Aquabit",
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660186429/aquabit_nlpylp.png",
         techs: "React, TypeScript e Styled-Components",
@@ -64,12 +58,5 @@ export const projects: Project[] = [
         image: "https://res.cloudinary.com/dududornelees/image/upload/v1660263438/lifecare_z2wtuf.png",
         techs: "React Navite, TypeScript e Styled-Components",
         github: "https://github.com/dududornelees/calculadora-imc"
-    },
-    {
-        title: "RG Nova Vida",
-        image: "https://res.cloudinary.com/dududornelees/image/upload/v1661455681/rg-nova-vida_lgaolr.png",
-        techs: "PHP, HTML, CSS e JavaScript",
-        github: "https://github.com/dududornelees/nova-vida",
-        site: "http://www.rgnovavida.epizy.com"
     }
 ];

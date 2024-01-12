@@ -36,7 +36,7 @@ export default function Home() {
                 </section>
 
                 <TitleCard title="Contato" />
-                <section className="mb-10">
+                <section className="mb-16">
                     <ContactButtons />
                 </section>
             </main>

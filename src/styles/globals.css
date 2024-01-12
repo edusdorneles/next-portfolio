@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-    --primary: #0b618e;
-    --secondary: #1e1b2d;
+    --primary: #2e5eaa;
+    --primary-hover: #2e5eaa90 --secondary: #2a323c;
+    --secondary-hover: #2a323c90;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #05020d;
     color: white;
+    background-color: #1d232a;
 }

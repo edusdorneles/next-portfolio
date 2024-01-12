@@ -4,14 +4,6 @@ export const techs = [
         title: "React.js"
     },
     {
-        image: "/images/techs/typescript-icon-svgrepo-com.svg",
-        title: "TypeScript"
-    },
-    {
-        image: "/images/techs/javascript-svgrepo-com.svg",
-        title: "JavaScript"
-    },
-    {
         image: "/images/techs/next-js-svgrepo-com.svg",
         title: "Next.js"
     },
@@ -24,16 +16,12 @@ export const techs = [
         title: "Node.js"
     },
     {
-        image: "/images/techs/redux-svgrepo-com.svg",
-        title: "Redux"
+        image: "/images/techs/typescript-icon-svgrepo-com.svg",
+        title: "TypeScript"
     },
     {
-        image: "/images/techs/styled-svgrepo-com.svg",
-        title: "Styled-Components"
-    },
-    {
-        image: "/images/techs/material-ui-svgrepo-com.svg",
-        title: "Material-UI"
+        image: "/images/techs/javascript-svgrepo-com.svg",
+        title: "JavaScript"
     },
     {
         image: "/images/techs/tailwind-svgrepo-com.svg",
@@ -46,5 +34,17 @@ export const techs = [
     {
         image: "/images/techs/scss2-svgrepo-com.svg",
         title: "SCSS"
+    },
+    {
+        image: "/images/techs/redux-svgrepo-com.svg",
+        title: "Redux"
+    },
+    {
+        image: "/images/techs/styled-svgrepo-com.svg",
+        title: "Styled-Components"
+    },
+    {
+        image: "/images/techs/material-ui-svgrepo-com.svg",
+        title: "Material-UI"
     }
 ];
