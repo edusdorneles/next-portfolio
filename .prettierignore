@@ -1,0 +1,6 @@
+*.svg
+*.git
+*.svn
+*.hg
+**/node_modules
+.github
