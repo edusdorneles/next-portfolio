@@ -40,20 +40,20 @@ export default function Home() {
           </a>
         </section>
 
-        <section className="max-w-96 flex flex-col items-center justify-center gap-2">
+        <section className="max-w-96 px-4 md:px-0 flex flex-col items-center justify-center gap-2">
           <h1 className="text-zinc-800 dark:text-white text-xl text-medium">Eduardo Dorneles</h1>
 
           <p className="text-zinc-500 dark:text-slate-400 text-sm">
             Desenvolvedor Front-End Sênior
           </p>
 
-          <p className="px-4 md:px-0 text-justify text-zinc-800 dark:text-white">
+          <p className="text-justify text-zinc-800 dark:text-white">
             Na área há mais de 4 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de
             clientes.
           </p>
         </section>
 
-        <section className="max-w-[520px] w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section className="max-w-[560px] px-4 md:px-0 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -70,7 +70,7 @@ export default function Home() {
 
               <p className="font-medium text-zinc-800 dark:text-white">{project.title}</p>
 
-              <p className="min-h-10 text-zinc-800 text-sm dark:text-white text-justify">
+              <p className="md:min-h-10 text-zinc-800 text-sm dark:text-white text-justify">
                 Stack: {project.stack}
               </p>
 
