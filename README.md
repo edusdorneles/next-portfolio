@@ -1,55 +1,36 @@
-<h1 align="center">Next Portfólio</h1>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<p align="center">Meu portfólio online desenvolvido com Next, TypeScript e Tailwind.<p>
+## Getting Started
 
-<p align="center">
-    <a href="#pre-requisitos">Pré-requisitos</a> •
-    <a href="#rodando-a-aplicacao">Rodando a aplicação</a> •
-    <a href="#tecnologias">Tecnologias</a> •
-    <a href="#autor">Autor</a>
-<p>
-
----
-
-<h3 id="pre-requisitos">Pré-requisitos</h3>
-Antes de começar, você vai precisar ter instalado em sua máquina as seguinte ferramentas: <a href="https://git-scm.com" target="_blank">Git</a>, <a href="https://nodejs.org/en/" target="_blank">Node.js</a>. <br>
-Além disto, é bom ter um editor para trabalhar com o código, como o <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>.
-
----
-
-<h3 id="rodando-a-aplicacao">Rodando a aplicação</h3>
+First, run the development server:
 
 ```bash
-# Clone o repositório
-$ git clone https://github.com/edusdorneles/next-portfolio.git
-# Acesse a pasta do projeto no terminal
-$ cd next-portfolio
-# Instale as dependências
-$ yarn
-# Inicie a aplicação
-$ yarn dev
-# O servidor iniciará na porta: 3000. Acesse http://localhost:3000/
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<h3 id="tecnologias">Tecnologias</h3>
-As seguintes ferramentas foram utilizadas na construção deste projeto:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
--   [Next](https://nextjs.org/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Tailwind](https://tailwindcss.com/)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
----
+## Learn More
 
-<h3><a target="_blank" href="https://www.dududornelees.com.br/">Abrir aplicação</a></h3>
-<p>Clique no link acima para abrir a aplicação no seu navegador.</p>
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<h3 id="autor">Autor</h3>
-<img src="https://avatars.githubusercontent.com/edusdorneles" height="100" />
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Made with 💙 by Eduardo Dorneles 👋.
+## Deploy on Vercel
 
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edusdorneles/) [![Website Badge](https://img.shields.io/badge/website-14141C?style=for-the-badge&logo=About.me&logoColor=white)](https://dududornelees.com.br/)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
