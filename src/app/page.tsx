@@ -18,6 +18,7 @@ export default function Home() {
           <a
             target="_blank"
             href="https://linkedin.com/in/edusdorneles"
+            aria-label="Link que redireciona para o LinkedIn"
             className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg flex flex-row items-center justify-between"
           >
             <FaLinkedin className="text-zinc-800 dark:text-white text-3xl" />
@@ -26,6 +27,7 @@ export default function Home() {
           <a
             target="_blank"
             href="https://github.com/edusdorneles"
+            aria-label="Link que redireciona para o GitHub"
             className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg flex flex-row items-center justify-between"
           >
             <FaGithub className="text-zinc-800 dark:text-white text-3xl" />
@@ -34,6 +36,7 @@ export default function Home() {
           <a
             target="_blank"
             href="https://www.instagram.com/edusdorneles/"
+            aria-label="Link que redireciona para o Instagram"
             className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg flex flex-row items-center justify-between"
           >
             <FaInstagram className="text-zinc-800 dark:text-white text-3xl" />
@@ -60,8 +63,8 @@ export default function Home() {
               className="bg-slate-300 transition-all rounded-lg dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 w-full h-full flex flex-col gap-2 p-2"
             >
               <Image
-                width={500}
-                height={282}
+                width={300}
+                height={158}
                 loading="lazy"
                 src={project.image}
                 alt={project.title}
@@ -76,13 +79,13 @@ export default function Home() {
 
               <div className="flex gap-2 items-center">
                 {project.site ? (
-                  <a target="_blank" href={project.site}>
+                  <a target="_blank" href={project.site} aria-label={`Link para o site - ${project.site}`}>
                     <FaGlobe className=" cursor-pointer text-2xl transition-all hover:bg-slate-100 dark:hover:bg-zinc-700 p-1 rounded-full text-zinc-800 dark:text-slate-300" />
                   </a>
                 ) : null}
 
                 {project.github ? (
-                  <a target="_blank" href={project.github}>
+                  <a target="_blank" href={project.github} aria-label={`Link para o GitHub - ${project.title}`}>
                     <FaGithub className=" cursor-pointer text-2xl transition-all hover:bg-slate-100 dark:hover:bg-zinc-700 p-1 rounded-full text-zinc-800 dark:text-slate-300" />
                   </a>
                 ) : null}
