@@ -11,7 +11,7 @@ export default function Home() {
           height={140}
           alt="Foto de perfil"
           className="rounded-full"
-          src="/images/profile.jpeg"
+          src="/images/profile.jpg"
         />
 
         <section className="grid justify-items-center grid-cols-3 gap-4">
@@ -79,13 +79,21 @@ export default function Home() {
 
               <div className="flex gap-2 items-center">
                 {project.site ? (
-                  <a target="_blank" href={project.site} aria-label={`Link para o site - ${project.site}`}>
+                  <a
+                    target="_blank"
+                    href={project.site}
+                    aria-label={`Link para o site - ${project.site}`}
+                  >
                     <FaGlobe className=" cursor-pointer text-2xl transition-all hover:bg-slate-100 dark:hover:bg-zinc-700 p-1 rounded-full text-zinc-800 dark:text-slate-300" />
                   </a>
                 ) : null}
 
                 {project.github ? (
-                  <a target="_blank" href={project.github} aria-label={`Link para o GitHub - ${project.title}`}>
+                  <a
+                    target="_blank"
+                    href={project.github}
+                    aria-label={`Link para o GitHub - ${project.title}`}
+                  >
                     <FaGithub className=" cursor-pointer text-2xl transition-all hover:bg-slate-100 dark:hover:bg-zinc-700 p-1 rounded-full text-zinc-800 dark:text-slate-300" />
                   </a>
                 ) : null}
