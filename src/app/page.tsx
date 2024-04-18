@@ -51,7 +51,7 @@ export default function Home() {
           </p>
 
           <p className="text-justify text-zinc-800 dark:text-white">
-            Na área há mais de 4 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de
+            Na área há mais de 5 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de
             clientes.
           </p>
         </section>
