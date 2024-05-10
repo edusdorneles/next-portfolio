@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Eduardo Dorneles - Desenvolvedor Front-End",
+  title: "Eduardo Dorneles - Tech Lead",
   description:
-    "Veja meu trabalho! Sou um desenvolvedor front-end e aqui você encontra meus projetos online. Desfrute de designs modernos e sites interativos!"
+    "Sou um { tech lead } e aqui você encontra meus projetos online. Desfrute de designs modernos e sites interativos!"
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
