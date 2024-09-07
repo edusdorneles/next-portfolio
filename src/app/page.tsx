@@ -1,6 +1,6 @@
 import Image from "next/image";
+import { projects } from "@/utils";
 import { FaGithub, FaGlobe, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { projects } from "./utils";
 
 export default function Home() {
   return (
@@ -19,7 +19,8 @@ export default function Home() {
             target="_blank"
             href="https://linkedin.com/in/edusdorneles"
             aria-label="Link que redireciona para o LinkedIn"
-            className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg flex flex-row items-center justify-between"
+            className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg
+rounded-xl flex flex-row items-center justify-between"
           >
             <FaLinkedin className="text-zinc-800 dark:text-white text-3xl" />
           </a>
@@ -28,7 +29,8 @@ export default function Home() {
             target="_blank"
             href="https://github.com/edusdorneles"
             aria-label="Link que redireciona para o GitHub"
-            className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg flex flex-row items-center justify-between"
+            className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg
+rounded-xl flex flex-row items-center justify-between"
           >
             <FaGithub className="text-zinc-800 dark:text-white text-3xl" />
           </a>
@@ -37,7 +39,8 @@ export default function Home() {
             target="_blank"
             href="https://www.instagram.com/edusdorneles/"
             aria-label="Link que redireciona para o Instagram"
-            className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg flex flex-row items-center justify-between"
+            className="bg-slate-300 transition-all dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer w-full p-3 rounded-lg
+rounded-xl flex flex-row items-center justify-between"
           >
             <FaInstagram className="text-zinc-800 dark:text-white text-3xl" />
           </a>
@@ -48,7 +51,7 @@ export default function Home() {
 
           <p className="text-zinc-500 dark:text-slate-400 text-sm">Tech Lead</p>
 
-          <p className="text-justify text-zinc-800 dark:text-white">
+          <p className="text-center text-zinc-800 dark:text-white">
             Na área há mais de 5 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de
             clientes.
           </p>
@@ -58,7 +61,8 @@ export default function Home() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-slate-300 transition-all rounded-lg dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 w-full h-full flex flex-col gap-2 p-2"
+              className="bg-slate-300 transition-all rounded-lg
+rounded-xl dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 w-full h-full flex flex-col gap-2 p-2"
             >
               <Image
                 width={300}
@@ -66,13 +70,14 @@ export default function Home() {
                 loading="lazy"
                 src={project.image}
                 alt={project.title}
-                className="rounded-lg h-full w-full object-fill"
+                className="rounded-lg
+rounded-xl h-full w-full object-fill"
               />
 
               <p className="font-medium text-zinc-800 dark:text-white">{project.title}</p>
 
               <p className="md:min-h-10 text-zinc-800 text-sm dark:text-white text-justify">
-                Stack: {project.stack}
+                Tech: {project.stack}
               </p>
 
               <div className="flex gap-2 items-center">
