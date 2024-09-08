@@ -1,13 +1,8 @@
-import NovaViva from "@/assets/images/nova-viva.jpeg";
-import GoUp from "@/assets/images/go-up.jpeg";
-import Aquabit from "@/assets/images/aquabit.jpeg";
-import TopFit from "@/assets/images/top-fit.jpeg";
-
 export const projects = [
   {
     id: 0,
     title: "Nova Viva",
-    image: NovaViva,
+    image: "/images/nova-viva.jpeg",
     stack: "React, TypeScript e Tailwind",
     site: "https://novaviva.com.br",
     github: "https://github.com/RodrigoMFrota/nova-viva"
@@ -15,7 +10,7 @@ export const projects = [
   {
     id: 1,
     title: "Golf Up Golf Academy",
-    image: GoUp,
+    image: "/images/go-up.jpeg",
     stack: "Angular, TypeScript e Tailwind",
     site: "https://go-up-landing-page.vercel.app/",
     github: "https://github.com/edusdorneles/go-up-landing-page"
@@ -23,7 +18,7 @@ export const projects = [
   {
     id: 2,
     title: "Aquabit",
-    image: Aquabit,
+    image: "/images/aquabit.jpeg",
     stack: "React, TypeScript e Tailwind",
     site: "https://aquabit-landing-page.vercel.app/",
     github: "https://github.com/edusdorneles/aquabit-landing-page"
@@ -31,7 +26,7 @@ export const projects = [
   {
     id: 3,
     title: "TopFit",
-    image: TopFit,
+    image: "/images/top-fit.jpeg",
     stack: "Next.js, TypeScript e Tailwind",
     site: "https://topfit-landing-page.vercel.app/",
     github: "https://github.com/dududornelees/topfit-landing-page"
