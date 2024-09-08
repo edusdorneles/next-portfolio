@@ -48,7 +48,7 @@ export default function Home() {
 
           <p className="text-zinc-500 dark:text-slate-400 text-sm">Tech Lead</p>
 
-          <p className="text-justify text-zinc-800 dark:text-white">
+          <p className="text-center text-zinc-800 dark:text-white">
             Na área há mais de 5 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de
             clientes.
           </p>
