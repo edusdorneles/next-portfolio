@@ -5,7 +5,6 @@ export const projects = [
     image: "/images/nova-viva.jpeg",
     stack: "React, TypeScript e Tailwind",
     site: "https://novaviva.com.br",
-    github: "https://github.com/RodrigoMFrota/nova-viva"
   },
   {
     id: 1,
@@ -25,11 +24,17 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Guampa",
+    image: "/images/guampa.jpeg",
+    stack: "React, TypeScript e Tailwind",
+    site: "https://cervejariaguampa.com.br/",
+  },
+  {
+    id: 4,
     title: "TopFit",
     image: "/images/top-fit.jpeg",
     stack: "Next.js, TypeScript e Tailwind",
     site: "https://topfit-landing-page.vercel.app/",
     github: "https://github.com/dududornelees/topfit-landing-page"
   },
-  
 ];
