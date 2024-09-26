@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Eduardo Dorneles - Tech Lead",
-  description:
-    "Sou um { tech lead } e aqui você encontra meus projetos online. Desfrute de designs modernos e sites interativos!"
+  description: "Sou um { Tech Lead } e estou na área há mais de 5 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de clientes. Desenvolvo soluções eficazes e personalizadas para atender suas necessidades.",
+  keywords: 'Tech Lead, Experiência, Projetos, Impacto, Clientes, Soluções eficazes, Personalização, Desenvolvimento, Inovação, Liderança, Tecnologia, Resultados, Atendimento às necessidades, Mais de 5 anos, Escalabilidade'
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
