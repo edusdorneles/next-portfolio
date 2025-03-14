@@ -1,7 +1,0 @@
-*.svg
-*.git
-*.svn
-*.hg
-**/node_modules
-.github
-**/utils/projects.ts
