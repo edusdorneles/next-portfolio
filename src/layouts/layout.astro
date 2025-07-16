@@ -1,0 +1,30 @@
+---
+export interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+}
+
+const {
+	title = 'Eduardo Dorneles - Tech Lead | Software Engineer',
+	description = 'Sou um { Tech Lead } e estou na área há mais de 5 anos, trabalhei em projetos nos quais impactam mais de 2 milhões de clientes. Desenvolvo soluções eficazes e personalizadas para atender suas necessidades.',
+	keywords = 'Tech Lead, Experiência, Projetos, Impacto, Clientes, Soluções eficazes, Personalização, Desenvolvimento, Inovação, Liderança, Tecnologia, Resultados, Escalabilidade, AWS, Software Engineer, Software Developer',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+	</head>
+
+	<body>
+		<slot />
+	</body>
+</html>
